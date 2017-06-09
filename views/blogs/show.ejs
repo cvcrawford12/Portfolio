@@ -1,0 +1,92 @@
+<% include ../partials/header %>
+
+<div class="ui main text container segment">
+    <div id="postHeader" class="ui huge header"><%= blog.title %><span id="time"> posted <%= blog.created.toDateString() %></span></div>
+    <div id="postAuthor">
+        <em>Submitted by <strong><%= blog.author.username %></strong></em>
+    </div>
+    <div class="ui top attached">
+        <div class="item">
+            <img id="show-image" class="ui centered rounded image" src="<%= blog.image %>">
+            <div class="container">
+                <div class="location">
+                    <p><%= blog.location %></p>
+                </div>
+                <div id="caption" class="description">
+                    <p><%= blog.body %></p>
+                </div>
+                <div id="buttons">
+                    <div style="cursor: pointer;" onclick="window.location='/blogs/<%= blog._id %>/likes';" class="ui labeled right floated button" tabindex="0">
+                        <div class="ui red animated button">
+                            <div class="visible content">Like</div>
+                            <div class="hidden content">
+                                <i class="heart icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui basic red left pointing label"><%= blog.likes %></div>
+                    </div>
+                    <div style="cursor: pointer;" onclick="window.location='/blogs/<%= blog._id %>/comments/new';" class="ui labeled right floated button" tabindex="0">
+                        <div class="ui blue animated button">
+                            <div class="visible content">Comment</div>
+                            <div class="hidden content">
+                                <i class="comment icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui basic blue left pointing label"><%= blog.comments.length %></div>
+                    </div>
+                    <% if(currentUser && blog.author.id.equals(currentUser._id)) { %>
+                        <div style="cursor: pointer; display: inline;" onclick="window.location='/blogs/<%= blog._id %>/edit'">
+                            <div class="ui yellow fade animated basic button">
+                                <div class="visible content">Edit</div>
+                                <div class="hidden content">
+                                    <i class="edit icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <form style="display: inline;" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                            <button class="ui red fade animated basic button">
+                                <div class="visible content">Delete</div>
+                                <div class="hidden content">
+                                    <i class="trash icon"></i>
+                                </div>
+                            </button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="ui raised segments">
+        <% blog.comments.forEach(function(comment) { %>
+            <div class="ui segment">
+                <div class="author">
+                    <h3 id="comment-header" class="ui header"><i class="comments icon"></i> <%= comment.author.username %> <span id="time">posted on <%= comment.created.toDateString() %></span></h3>
+                </div>
+                <div class="post">
+                    <p><%= comment.content %></p>
+                </div>
+                <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                    <div style="cursor: pointer; display: inline;" onclick="window.location='/blogs/<%= blog._id %>/comments/<%= comment._id %>/edit'">
+                        <div class="ui yellow fade animated basic button">
+                            <div class="visible content">Edit</div>
+                            <div class="hidden content">
+                                <i class="edit icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <form style="display: inline;" action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                        <button class="ui red fade animated basic button">
+                            <div class="visible content">Delete</div>
+                            <div class="hidden content">
+                                <i class="trash icon"></i>
+                            </div>
+                        </button>
+                    </form>
+                <% } %>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

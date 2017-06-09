@@ -1,0 +1,36 @@
+<% include ./partials/header %>
+
+    <div class="ui main text container">
+        <div class="ui top attached raised segment">
+            <div class="ui divided items">
+                <% blogs.forEach(function(blog) { %>
+                    <!-- CHECK DATE OF BLOGS AND PUSH ONLY THOSE POSTED WITHIN 7 DAYS-->
+                    <% if(date - blog.created.getDate() < 7) { %>
+                        <div class="item">
+                            <div id="special" class="ui medium bordered image">
+                                <img id="images" src="<%= blog.image %>">
+                            </div>
+                            <div class="content">
+                                <a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %> <span id="time">posted <%= blog.created.toDateString() %></span></a>
+                                <div class="description">
+                                    <p><%= blog.body.substring(0, 100) %>...</p>  
+                                </div>
+                                <hr>
+                                <div class="location">
+                                    <p><%= blog.location %></p>
+                                </div>
+                                <div class="extras">
+                                    <div onclick="window.location='/blogs/<%= blog._id %>'" class="ui floated green basic fade animated button">
+                                        <div class="visible content">Read More</div>
+                                        <div class="hidden content"><i class="unhide icon"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }); %>
+            </div>
+        </div>
+    </div>    
+
+<% include ./partials/footer %>

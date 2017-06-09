@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<div id="register" class="ui main container segment">
+    <div class="ui huge header">Register For An Account</div>
+    <form action="/register" method="POST" class="ui form">
+        <div class="required field">
+            <label><strong>Username</strong></label>
+            <input  type="text" name="username" placeholder="johndoe456">
+        </div>
+        <div class="required field">
+            <label><strong>Password</strong></label>
+            <input  type="password" name="password" placeholder="PinkElephants711">
+        </div>
+        <div class="equal width fields">
+            <div class="field">
+                <label><strong>First Name</strong></label>
+                <input type="text" name="firstName" placeholder="John"> 
+            </div>
+            <div class="field">
+                <label><strong>Last Name</strong></label>
+                <input type="text" name="lastName" placeholder="Doe">
+            </div>
+        </div>
+        <button class="ui blue animated huge submit button">
+            <div class="visible content">Create Account</div>
+            <div class="hidden content">
+                <i class="send icon"></i>
+            </div>
+        </button>
+    </form>
+</div>
+
+<% include ../partials/footer %>

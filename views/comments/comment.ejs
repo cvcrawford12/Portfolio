@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+
+<div style="margin-top: 10%;" class="ui main text container segment">
+    <div class="ui huge header">
+        Comment On This Post 
+        <div class="ui rounded image">
+            <a class="ui rounded image" href="/blogs/<% blog._id %>"><img src="<%= blog.image %>"></a>
+        </div>
+    </div>
+    <!--?_method=PUT-->
+    <form class="ui form" action="/blogs/<%= blog._id%>/comments" method="POST">
+        <div class="field">
+            <label>Comment</label>
+            <textarea name="comment[content]"></textarea>
+        </div>
+        <input class="ui teal basic button big" type="submit">
+    </form>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,84 @@
+<% include ./head %>
+    <body>
+        <div class="ui medium inverted fixed menu">
+            <div class="item">
+                <i class="world icon"></i>
+                <span class="brand">euroBlog</span>
+            </div>
+            <div class="item">
+                <a href="/">
+                    <i class="home icon"></i>
+                    Home
+                </a>
+            </div>
+            <a href="/blogs/new" class="item">
+                New Post
+            </a>
+            <div class="ui simple dropdown item">
+                Destinations <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="/destinations/Prague" class="item"><i class="cz flag"></i>Prague</a>
+                    <a href="/destinations/Spain" class="item"><i class="es flag"></i>Spain</a>
+                    <a href="/destinations/Italy" class="item"><i class="it flag"></i>Italy</a>
+                    <a href="/destinations/France" class="item"><i class="fr flag"></i>France</a>
+                    <a href="/destinations/Amsterdam" class="item"><i class="nl flag"></i>Amsterdam</a>
+                    <a href="/destinations/Germany" class="item"><i class="ge flag"></i>Germany</a>
+                    <a href="/destinations/Ireland" class="item"><i class="ie flag"></i>Ireland</a>
+                    <a href="/destinations/England" class="item"><i class="gb flag"></i>England</a>
+                </div>
+            </div>
+            <div class="right menu">
+                <% if(!currentUser) { %>
+                    <div class="item">
+                        <div onclick="window.location='/login'" class="ui fade animated inverted basic green button">
+                            <div class="visible content">Login</div>
+                            <div class="hidden content">
+                                <i class="sign in icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div onclick="window.location='/register'" class="ui inverted basic blue fade animated button">
+                           <div class="visible content">Sign Up</div> 
+                           <div class="hidden content">
+                               <i class="add user icon"></i>
+                           </div>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <div class="item">
+                        <div onclick="window.location='/logout'" class="ui fade animated inverted basic red button">
+                            <div class="visible content">Logout</div>
+                            <div class="hidden content"><i class="sign out icon"></i></div>
+                        </div>
+                    </div>
+                        <div class="item">
+                            <img class="ui image avatar" src="https://images.unsplash.com/photo-1462367676324-8ce27ae3fa2a?dpr=2&auto=compress,format&fit=crop&w=376&h=251&q=80&cs=tinysrgb&crop=&bg=">
+                        <span> Signed in as <%= currentUser.firstName %></span>
+                    </div>
+                <% } %>
+                <div class="item">
+                    <a href="https://www.facebook.com/connor.crawford.747"><i class="facebook square icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="message" class="ui container">
+            <% if(error && error.length > 0) { %>
+                <div class="ui large negative message">
+                    <i class="close icon"></i>
+                    <div class="ui header"><%= error %></div>
+                </div>
+            <% } %>
+            <% if(success && success.length > 0) { %>
+                <div class="ui large success message">
+                    <i class="close icon"></i>
+                    <div class="ui header"><%= success %></div>
+                </div>
+            <% } %>
+            <% if(info && info.length > 0) { %>
+                <div class="ui large info message">
+                    <i class="close icon"></i>
+                    <div class="ui header"><%= info %></div>
+                </div>
+            <% } %>
+        </div>

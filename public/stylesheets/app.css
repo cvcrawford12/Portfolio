@@ -1,0 +1,107 @@
+html {
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1); 
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url("barcelona-spain.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+icon {
+    font-size: 2em;
+}
+
+.facebook {
+    color: rgb(99, 154, 242);
+}
+
+.container.main {
+    margin-top: 5%;
+    margin-bottom: 0;
+    margin-left: 0;
+    box-shadow: -5px -2px 7px rgba(0, 0, 0, 0.9);
+}
+
+img {
+    box-shadow: -5px -2px 7px rgba(0, 0, 0, 0.7);
+}
+
+
+#delete {
+    display: inline-block;
+}
+
+.brand {
+    font-size: 2em;
+}
+
+.location, #date, #caption {
+	padding-bottom: 7px;
+}
+
+#date {
+    padding-top: 5px;
+    color: rgb(99, 154, 242);
+}
+
+.location {
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.location, .description, .extras {
+    padding-bottom: 5%;
+}
+
+#time {
+    font-weight: 100;
+    font-size: 0.65em;
+    opacity: 0.5;
+}
+
+#buttons {
+    padding-bottom: 7%;
+}
+
+#comment-header {
+    color: #0E6EB8;
+    padding-bottom: 2%;
+}
+
+.ui.button {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#register {
+    width: 30%;
+}
+
+#special {
+    height: 200px;
+}
+
+#images {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.post {
+    padding-bottom: 5px;
+}
+
+#message {
+    margin-top: 5%;
+    width: 75%;
+}
+
+#postAuthor, #postHeader {
+    margin-bottom: 4px;
+}
+

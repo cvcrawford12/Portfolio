@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div style="margin-top: 10%;" class="ui main text container segment">
+    <div class="ui huge header">
+        Edit This Comment <%= comment.name %>
+    </div>
+    <!--?_method=PUT-->
+    <form class="ui form" action="/blogs/<%= blog_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" name="comment[name]">
+        </div>
+        <div class="field">
+            <label>Comment</label>
+            <textarea name="comment[content]"></textarea>
+        </div>
+        <input class="ui teal basic button big" type="submit">
+    </form>
+</div>
+
+<% include ../partials/footer %>
