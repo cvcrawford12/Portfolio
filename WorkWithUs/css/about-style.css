@@ -1,0 +1,889 @@
+body, html {
+	font-family: 'Oswald', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #fff;
+	width: 100% !important;
+	height: 100% !important;
+	line-height: 1.7em;
+}
+
+h1 {
+	font-weight: 700;
+}
+h1 strong {
+	font-weight: 900;
+}
+h2 {
+	text-transform: uppercase;
+	line-height: 20px;
+	font-weight: 600;
+	margin: 0;
+	color: #555;
+}
+h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #555;
+}
+h4 {
+	font-weight: 500;
+	color: #555;
+}
+h5 {
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 20px;
+}
+p {
+	font-size: 14px;
+}
+a {
+	color: #777;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: none;
+	color: #38c0c9;
+	cursor: pointer;
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+	webkit-padding: 0;
+	moz-padding: 0;
+}
+
+/**********************/
+/* Begin Bootstap custom styling*/
+/**********************/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+
+.btn-default {
+	color: #f6f6f6;
+	background: #38c0c9;
+	border: 0;
+	padding: 12px 24px;
+	margin: 0 8px;
+	font-size: 18px;
+	transition: all 0.5s;
+	z-index: 1;
+	position: relative;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+	color: #f6f6f6;
+	background-color: #38c0c9;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+}
+
+/**********************/
+/* Styling for preloading */
+/**********************/
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #ddd;
+	z-index: 99999;
+	height: 100%;
+}
+#status {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 64px;
+	height: 64px;
+	margin: -32px 0 0 -32px;
+	padding: 0;
+}
+
+.section-title hr{
+	height: 4px;
+	width: 150px;
+	text-align: center;
+	position: relative;
+	background: #38c0c9;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	border: 0;
+	font-family: "Oswald";
+}
+
+/**********************/
+/* Navigation */
+/**********************/
+.navbar-custom {
+	padding: 0;
+	border-bottom: 0;
+	letter-spacing: 1px;
+	background: #333;
+	text-transform: uppercase;
+}
+
+.navbar-custom .navbar-toggle {
+	color: #eee;
+	font-size: 18px;
+	border-radius: 2px;
+	padding: 0 4px;
+
+}
+
+.navbar-toggle {
+	background-color: none;
+}
+
+
+.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+	color: #ffffff;
+}
+.navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
+	outline: 0;
+}
+.navbar-custom a {
+	color: #fff;
+	margin: 10px 0;
+}
+.navbar-custom .nav li a {
+	-webkit-transition: background .3s ease-in-out;
+	-moz-transition: background .3s ease-in-out;
+	transition: background .3s ease-in-out;
+}
+.navbar-custom .nav li a:hover {
+	outline: 0;
+	color: #38c0c9;
+	background-color: transparent;
+}
+.navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
+	outline: 0;
+	background-color: transparent;
+	color: #38c0c9;
+}
+.navbar-custom .nav li.active {
+	outline: 0;
+}
+.navbar-custom .nav li.active a {
+	background-color: rgba(255,255,255,.3);
+}
+.navbar-custom .nav li.active a:hover {
+	color: #fff;
+}
+
+.navbar-left {
+  margin: auto;
+	padding: 0;
+}
+.navbar-left>img {
+  height: auto;
+  width: 50%;
+	margin-left: 5%;
+}
+
+#brand-image {
+	width: 5%;
+	padding-bottom: 10px;
+}
+
+
+#intro {
+	display: table;
+	width: 100%;
+	height: 100vh;
+	padding: 100px 0 0 0;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+							url(https://www.sportsspectrum.com/articles/wp-content/uploads/2014/08/sports-faith-background.jpg) no-repeat center center fixed;
+	background-color: #000;
+  background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  position: relative;
+}
+
+#intro .intro-body {
+	display: table-cell;
+	vertical-align: middle;
+}
+#intro .intro-body H1 {
+	font-size: 76px;
+	font-weight: 700;
+	/*color: #38c0c9;*/
+	text-shadow: 2px 0px 4px rgba(10,10,10,0.8);
+	z-index: 1;
+	position: relative;
+}
+
+#intro .landing-header {
+	display: inline-block;
+	left: 10%;
+}
+
+
+#intro .intro-body .brand-heading {
+	/*color: #38c0c9;*/
+	text-shadow: 2px 0px 4px rgba(10,10,10,0.8);
+	z-index: 1;
+	position: relative;
+}
+
+#intro .intro-body .intro-text {
+	font-size: 18px;
+	z-index: 1;
+	position: relative;
+}
+
+
+/* About section*/
+#who {
+	height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.4)),
+							url(https://i.ytimg.com/vi/FCXej_MJfEM/maxresdefault.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  position: relative;
+}
+
+.about-us-nine {
+	color: #38c0c9;
+  display: inline-block !important;
+  background-color: transparent;
+  font-size: 1.4em;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  text-shadow: 1px 2px #000;
+}
+
+/*#who > *, #what > *, #partners > *, #mission > * {
+	z-index: 999;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}*/
+
+.section-title {
+	padding-top: 100px;
+	padding-bottom: 10px;
+}
+
+#partners .first-row, #partners .second-row, #institutions .first-row, #institutions .second-row {
+	text-align: center;
+}
+
+
+#who p,dl,h3,hr,
+#what p,dl,h3,hr,
+#partners p,dl,h3,hr,
+#mission p,dl,h3,hr,
+#values p, dl, h3, hr{
+	text-align: center;
+}
+
+#who .about-text, #what .about-text {
+	margin-left: 10px;
+}
+#who H4 {
+	font-size: 20px;
+}
+
+#values dl {
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+#values dd {
+	margin-bottom: 3px;
+	list-style: none;
+	padding: 0;
+	padding-right: 5px;
+	font-size: 1.5em;
+	display: inline;
+}
+#values dd:before {
+	content: "✓";
+	font-weight: 600;
+	padding-right: 5px;
+	color: #38c0c9;
+}
+
+
+#who p, #what p, #mission p, #values p {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+
+#who p, #what p {
+	margin-top: 12.5%;
+	font-size: 20px;
+}
+
+#who h2, h3 strong,
+#what h2, h3 strong,
+#partners h2, h3 strong,
+#mission h2, h3 strong,
+#team h2, h3 strong,
+#footer h2, h3 strong,
+#values h2, h3 strong {
+	color: #fff;
+  padding-bottom: 25px;
+	line-height: 1em;
+}
+
+.col-centered {
+	margin: 0 auto;
+	float: none;
+}
+
+
+#what {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+              url(../img/backgrounds/about-bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+#partners {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
+							url(http://uhqwallpapers.com/wp-content/uploads/2017/03/Business-HD-Wallpapers-for-Deskotp.jpg);
+  background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#partners .first-row {
+	text-align: center;
+	margin: 10% 0;
+}
+
+#partners .second-row img {
+	width: 70%;
+}
+
+#partners .caption {
+	color: #fff !important;
+	padding-top: 20px;
+}
+
+#partners .caption a {
+	color: #38c0c9;
+	cursor: pointer;
+}
+
+#partners .minor-team {
+	padding-top: 25%;
+}
+
+#partners .club-item {
+	display:inline;
+  margin:5px 20px;
+  padding:2px;
+	width: 15%;
+	position: relative;
+  display: inline-block;
+}
+
+
+#partners ul {
+	display: inline;
+}
+
+#partners img {
+  max-width: 100%;
+  height: auto;
+	float: none;
+}
+
+/* Mission section*/
+#mission {
+	height: 100%;
+  width: 100vw;
+  background: url(../img/backgrounds/mission-bg.jpg);
+  background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: 60% 0;
+  padding-bottom: 100px;
+}
+
+#mission .section-title {
+  padding-bottom: 5%;
+}
+
+#mission p {
+  font-size: 22px;
+}
+
+/**********************/
+/* Team Section */
+/**********************/
+#team {
+	padding: 100px 0;
+	padding-bottom: 140px;
+	position: relative;
+	/*http://www.ideiademarketing.com.br/wp-content/uploads/2015/10/equipe.jpg*/
+	background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+	/*../img/team-background.jpg*/
+							url(http://klika.ba/assets/projects/wearefootball/waf_5@2x-1370d832239ee9215dbfc31e2531c803.jpg) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	z-index: 100;
+	color: #fff;
+}
+
+
+#team h2 {
+	color: #fff;
+}
+
+#testimonials .thumbnail > img, #testimonials .thumbnail a > img {
+	max-width: 20%;
+	height: auto;
+	background-color: #f6f6f6;
+}
+#team .thumbnail {
+	background: transparent;
+	border: 0;
+}
+#team .thumbnail .caption {
+	padding: 9px;
+	color: #777;
+}
+
+#team .team-item {
+	max-width: 140px;
+	max-height: 140px;
+	margin-bottom: 30px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#team .btn-group, .btn-group-vertical {
+	height: 10px;
+}
+
+#team img, .hover-bg {
+	max-width: 120px;
+	max-height: 140px;
+	overflow: hidden;
+}
+
+/**********************/
+/* Team Filter Section */
+/**********************/
+.categories {
+	padding-bottom: 10%;
+	text-align: center;
+}
+
+div.cat button {
+	display: inline-block;
+	margin: auto;
+}
+
+
+.btn.type a {
+	display: inline-block;
+	color: #fff;
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+	font-size: 1.3em;
+}
+.btn.type a.active {
+	color: #38c0c9 !important;
+	border: none;
+	padding: 0;
+	background: none;
+	text-decoration: underline;
+}
+.btn.type a:hover {
+	color: #38c0c9;
+	border: none;
+	padding: 0;
+}
+
+
+.isotope-item {
+	z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+	z-index: 1
+}
+.isotope, .isotope .isotope-item {
+	/* change duration value to whatever you like */
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+}
+.isotope-item {
+	margin-right: -1px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.isotope {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	transition-property: height, width;
+}
+.isotope .isotope-item {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property: -moz-transform, opacity;
+	transition-property: transform, opacity;
+}
+
+
+.team-item .hover-bg {
+	max-height: 100%;
+	overflow: hidden;
+	position: relative;
+	border-radius: 50%;
+}
+.hover-bg .hover-text {
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	color: #fff;
+	background: rgba(135,180,255,0.4);
+	padding: 25% 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.5s;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+.hover-bg .hover-text>h4 {
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	transition: all 0.3s;
+	color: #f6f6f6;
+	font-size: 0.8em;
+}
+.hover-bg:hover .hover-text>h4 {
+	opacity: 1;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  font-size: 0.8em;
+}
+.hover-bg .hover-text>p {
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	transition: all 0.3s;
+	font-size: 0.7em;
+}
+.hover-bg:hover .hover-text>p {
+	opacity: 1;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.hover-bg:hover .hover-text {
+	opacity: 1;
+}
+
+
+
+/* Culture Values Sections */
+#values {
+	height: 100vh;
+  width: 100vw;
+  /*background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+							url(https://images.unsplash.com/photo-1493689485253-f07fcbfc731b?dpr=2&auto=format&fit=crop&w=1080&h=737&q=80&cs=tinysrgb&crop=);*/
+/*http://4.bp.blogspot.com/-aPGwK6HvAD4/VgJrjgkvrCI/AAAAAAAACh0/lXdxiXBUS9M/s1600/best-hd-wallpapers.jpg*/
+	background: url(http://www.losimperdibles.es/uploads/noticias/20170606142507--imperdible-02-ofrecera-al-publico-infantil-un-entrenamiento-de-futbol-basado-en-nuevas-tecnologias.jpg);
+  background-repeat: no-repeat;
+	background-position: 0 -100px;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  position: relative;
+
+}
+
+#values:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7));
+}
+
+
+/**********************/
+/* Footer Section*/
+/**********************/
+#footer {
+	background: #000;
+	color: #777;
+	padding: 20px 0;
+	text-align: center;
+}
+#footer a {
+	color: #999999;
+}
+#footer a:hover, a:focus {
+	color: #38c0c9;
+}
+#footer p {
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.awards-slider {
+  text-align: center;
+  margin: 35px auto 10px auto;
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+.awards-slider .section-title h2 {
+	color: #f6f6f6;
+}
+
+.awards-slider ul {
+  list-style: none;
+	margin-bottom: 2%;
+	padding: 0;
+	display: block;
+}
+
+.awards-slider ul li {
+  margin-right: 15px;
+	margin-bottom: 4px;
+  display: inline-block;
+}
+
+.awards-slider ul li img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+/* Media Queries*/
+@media (max-width: 768px) {
+
+#brand-image {
+	width: 25%;
+}
+
+#partners .minor-team {
+	padding: 4px;
+}
+
+#what p {
+	margin-top: 1.5%;
+}
+
+body {
+	line-height: 1.3em;
+}
+
+.shrink-mobile {
+	max-height: 65px !important;
+}
+
+#partners {
+	height: auto;
+}
+
+#partners .caption p {
+	font-size: 0.8em;
+}
+
+.awards-slider ul li img {
+	max-width: 80%;
+	height: auto;
+}
+
+#who p,
+#what p,
+#values p,
+#mission p {
+	font-size: 1em;
+}
+
+#values dd {
+	font-size: 1.2em;
+}
+
+#values {
+	background-position: 20%;
+}
+
+#what .section-title,
+#values .section-title,
+#mission .section-title {
+	margin: 10% 0;
+}
+
+#team {
+	background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+							url(../img/backgrounds/team-bg-mobile.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+
+}
+
+#intro {
+	background-position: 10% 0;
+}
+
+#intro .landing-header {
+	margin-top: -25%;
+}
+
+#intro .intro-body .brand-heading img {
+	max-width: 90%;
+}
+
+#video-container {
+	display: none;
+}
+
+
+#team img, .hover-bg {
+	max-width: 90px;
+	max-height: 120px;
+	overflow: hidden;
+}
+
+#team .categories .type {
+	font-size: 0.6em;
+	padding: 6px 10px !important;
+}
+
+#team .hover-text > h4, p {
+	font-size: 0.7em;
+}
+
+.hover-bg .hover-text {
+	padding: 10% 20%;
+}
+
+#who p  {
+  font-size: 0.9em;
+  display: block;
+	margin: 25% 5%;
+}
+
+#partners .club-item {
+	width: 35%;
+}
+
+#partners .club-item img{
+	width: 100%;
+}
+
+
+#partners .club-item {
+	width: 35%;
+}
+
+}
+
+
+/* Video Section */
+#video-container {
+  height: 611px; /* Adjust TV image width */
+  width: 300px; /* Adjust TV image height */
+  position: relative;
+	margin: auto;
+}
+#video-container::after {
+  content: '';
+  display: block;
+  background: url(../img/transparent-iphone.png) no-repeat top left transparent;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 1000;
+	pointer-events:none;
+	-ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#video-container video {
+	position: absolute;
+	top: 170px;
+	left: -82px;
+	z-index: 999;
+}
+
+#video-container div {
+	cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/play.png) no-repeat;
+  background-position: center;
+	z-index: 1001;
+	pointer-events: none;
+}
+
+.popover {
+	color: #000;
+}
