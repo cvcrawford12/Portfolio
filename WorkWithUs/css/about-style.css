@@ -176,7 +176,6 @@ ul, ol {
 }
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
 	outline: 0;
-	background-color: transparent;
 	color: #38c0c9;
 }
 .navbar-custom .nav li.active {

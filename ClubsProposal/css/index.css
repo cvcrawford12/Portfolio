@@ -1,0 +1,283 @@
+body, html {
+	font-family: 'Roboto', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #fff;
+	width: 100% !important;
+	height: 100% !important;
+	line-height: 1.7em;
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+	webkit-padding: 0;
+	moz-padding: 0;
+}
+
+.navbar-custom {
+	padding: 0;
+	border-bottom: 0;
+	letter-spacing: 1px;
+	background: #333;
+	text-transform: uppercase;
+}
+
+.navbar-custom .navbar-toggle {
+	color: #eee;
+	font-size: 18px;
+	border-radius: 2px;
+	padding: 0 4px;
+
+}
+
+.navbar-toggle {
+	background-color: none;
+}
+
+
+.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+	color: #ffffff;
+}
+.navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
+	outline: 0;
+}
+.navbar-custom a {
+	color: #fff;
+	margin: 10px 0;
+}
+.navbar-custom .nav li a {
+	-webkit-transition: background .3s ease-in-out;
+	-moz-transition: background .3s ease-in-out;
+	transition: background .3s ease-in-out;
+}
+.navbar-custom .nav li a:hover {
+	outline: 0;
+	color: #38c0c9;
+	background-color: transparent;
+}
+.navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
+	outline: 0;
+	background-color: transparent;
+	color: #38c0c9;
+}
+.navbar-custom .nav li.active {
+	outline: 0;
+}
+.navbar-custom .nav li.active a {
+	color: #38c0c9;
+}
+.navbar-custom .nav li.active a:hover {
+	color: #fff;
+}
+
+.navbar-left {
+  margin: auto;
+	padding: 0;
+}
+.navbar-left>img {
+  height: auto;
+  width: 50%;
+	margin-left: 5%;
+}
+
+a {
+	color: #777;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: none;
+	color: #38c0c9;
+	cursor: pointer;
+}
+
+p {
+  color: #fff;
+}
+
+/* Who We Are Section */
+#who {
+  height: 120%;
+  width: 100%;
+  padding: 100px 0;
+  background: linear-gradient(to right, rgba(40, 40, 40,0.6), rgba(40, 40, 40, 0.6)), url(../img/backgrounds/bg-people-1.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
+}
+
+#who .content {
+  font-size: 1.7em;
+  margin: 4% 0;
+}
+
+#who .logo {
+  padding-bottom: 5%;
+}
+
+#who strong {
+  color: #38c0c9;
+}
+
+/* What We Do Section */
+#what {
+  height: 120%;
+  width: 100%;
+  background: url(../img/backgrounds/bg-people-7.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
+}
+
+#what .btn-wrapper {
+  text-align: center;
+  padding-top: 5%;
+}
+
+#what .buttons {
+  margin: 0 auto;
+  text-align: center;
+  width: inherit;
+  display: inline-block;
+}
+
+#what .content {
+  font-size: 1.5em;
+  color: #000;
+  margin-top: 5%;
+  line-height: 1.2em;
+}
+
+#what .iphone-wrapper {
+  background: url(../img/iphone.png) no-repeat;
+  width: 300px;
+  height: 635px;
+  margin-top: 10%;
+  margin-left: 10%;
+  z-index: 2;
+}
+
+#what .iphone-image {
+  position: relative;
+  width: 265px;
+  height: 470px;
+  top:70px;
+  left: 18px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#clubs-image {
+  background: url(../img/mockups/mockup_club.png);
+}
+
+#fans-image {
+  background: url(../img/mockups/mockup_fan.png);
+}
+
+#brands-image {
+  background: url(../img/mockups/mockup_brand.png);
+}
+
+#players-image {
+  background: url(../img/mockups/mockup_idol.png);
+}
+
+.btn-default {
+	color: #000;
+	background: transparent;
+	border: 1px solid #38c0c9;
+	margin: 0 8px;
+	font-size: 18px;
+	position: relative;
+  border-radius: 24px;
+  width: 150px;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active {
+	color: #f6f6f6 !important;
+	background-color: #38c0c9 !important;
+  outline: none !important;
+}
+
+.btn-default:hover {
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 2s; /* Safari 4+ */
+  -moz-animation:    fadeIn 2s; /* Fx 5+ */
+  -o-animation:      fadeIn 2s; /* Opera 12+ */
+  animation:         fadeIn 2s; /* IE 10+, Fx 29+ */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut 2s; /* Safari 4+ */
+  -moz-animation:    fadeOut 2s; /* Fx 5+ */
+  -o-animation:      fadeOut 2s; /* Opera 12+ */
+  animation:         fadeOut 2s; /* IE 10+, Fx 29+ */
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp;
+}
