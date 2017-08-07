@@ -18,9 +18,9 @@ function main() {
         $('#' + currentId + '-content').hide();
         $('#' + nextId + '-content').attr('class', 'what-content animated fadeIn');
         $('#' + nextId + '-content').show();
-        $('#' + currentId + '-image').attr('class', 'iphone-image animated slideOutUp');
+        $('#' + currentId + '-image').attr('class', 'iphone-image animated fadeOut');
         $('#' + currentId + '-image').hide();
-        $('#' + nextId + '-image').attr('class', 'iphone-image animated slideInUp');
+        $('#' + nextId + '-image').attr('class', 'iphone-image animated fadeIn');
         $('#' + nextId + '-image').show();
       });
     });
