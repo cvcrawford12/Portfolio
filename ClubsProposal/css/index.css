@@ -28,7 +28,7 @@ ul, ol {
 	font-size: 18px;
 	border-radius: 2px;
 	padding: 0 4px;
-
+	margin-top: 12px;
 }
 
 .navbar-toggle {
@@ -97,7 +97,7 @@ p {
 
 /* Who We Are Section */
 #who {
-  height: 120%;
+  height: 100%;
   width: 100%;
   padding: 100px 0;
   background: linear-gradient(to right, rgba(40, 40, 40,0.6), rgba(40, 40, 40, 0.6)), url(../img/backgrounds/bg-people-1.jpg);
@@ -111,6 +111,8 @@ p {
 #who .content {
   font-size: 1.7em;
   margin: 4% 0;
+	text-align: left;
+	line-height: 1.2em;
 }
 
 #who .logo {
@@ -121,9 +123,13 @@ p {
   color: #38c0c9;
 }
 
+#who .show-mobile {
+	display: none;
+}
+
 /* What We Do Section */
 #what {
-  height: 120%;
+  height: 100%;
   width: 100%;
   background: url(../img/backgrounds/bg-people-7.jpg);
   -webkit-background-size: cover;
@@ -146,10 +152,14 @@ p {
 }
 
 #what .content {
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #000;
-  margin-top: 5%;
+  margin-top: 4%;
   line-height: 1.2em;
+}
+
+#what li {
+	margin-top: 10%;
 }
 
 #what .iphone-wrapper {
@@ -158,7 +168,6 @@ p {
   height: 635px;
   margin-top: 10%;
   margin-left: 10%;
-  z-index: 2;
 }
 
 #what .iphone-image {
@@ -167,7 +176,6 @@ p {
   height: 470px;
   top:70px;
   left: 18px;
-  z-index: 1;
   overflow: hidden;
 }
 
@@ -207,12 +215,6 @@ p {
   outline: none !important;
 }
 
-.btn-default:hover {
-  -moz-box-shadow:    inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow:         inset 0 0 10px #000000;
-}
-
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -229,10 +231,10 @@ p {
 }
 
 .fadeIn {
-  -webkit-animation: fadeIn 2s; /* Safari 4+ */
-  -moz-animation:    fadeIn 2s; /* Fx 5+ */
-  -o-animation:      fadeIn 2s; /* Opera 12+ */
-  animation:         fadeIn 2s; /* IE 10+, Fx 29+ */
+  -webkit-animation: fadeIn 0.5s; /* Safari 4+ */
+  -moz-animation:    fadeIn 0.5s; /* Fx 5+ */
+  -o-animation:      fadeIn 0.5s; /* Opera 12+ */
+  animation:         fadeIn 0.5s; /* IE 10+, Fx 29+ */
 }
 
 @keyframes fadeOut {
@@ -246,10 +248,10 @@ p {
 }
 
 .fadeOut {
-  -webkit-animation: fadeOut 2s; /* Safari 4+ */
-  -moz-animation:    fadeOut 2s; /* Fx 5+ */
-  -o-animation:      fadeOut 2s; /* Opera 12+ */
-  animation:         fadeOut 2s; /* IE 10+, Fx 29+ */
+  -webkit-animation: fadeOut 1s; /* Safari 4+ */
+  -moz-animation:    fadeOut 1s; /* Fx 5+ */
+  -o-animation:      fadeOut 1s; /* Opera 12+ */
+  animation:         fadeOut 1s; /* IE 10+, Fx 29+ */
 }
 
 @keyframes slideInUp {
@@ -280,4 +282,68 @@ p {
 
 .slideOutUp {
   animation-name: slideOutUp;
+}
+
+/* Typewriter effect */
+/*.typewriter .content {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space:inherit;
+  margin: 0 auto;
+  animation:
+    typing 3.5s steps(140, end),
+    blink-caret .75s step-end infinite;
+}*/
+
+/* The typing effect */
+/*@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}*/
+
+/* The typewriter cursor effect */
+/*@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}*/
+
+/* Media Queries */
+@media (min-width: 1025px) {
+	#who, #what {
+		height: 120%;
+	}
+}
+
+@media (max-width: 648px) {
+	#who .content {
+		font-size: 1em;
+    margin: 8% 0;
+    text-align: center;
+	}
+
+	#who .show-mobile {
+		display: block;
+	}
+
+	.col-centered {
+		margin: 0 auto !important;
+		float: none !important;
+	}
+
+	.filter-btn {
+		margin-bottom: 4px;
+		width: 35%;
+	}
+
+	#what .content {
+	  font-size: 1em;
+	  color: #000;
+	  margin-top: 4%;
+	  line-height: 1.2em;
+		text-align: center;
+	}
+
+	#what {
+		height: auto;
+	}
 }

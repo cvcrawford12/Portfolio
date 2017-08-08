@@ -8,7 +8,8 @@
     <!-- CSS Files -->
     <link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200,400,700" rel="stylesheet">
 
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -36,25 +37,27 @@
     <section id="who">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 pull-right">
-            <img class="img-responsive logo" src="http://9inesports.com/static/img/logo-app.png">
+          <div class="col-md-4 pull-right col-centered">
+            <img class="img-responsive logo col-centered" src="http://9inesports.com/static/img/logo-app.png">
           </div>
         </div>
         <div class="row">
-          <div class="col-md-8 col-md-offset-1">
-            <p class="content">
+          <div class="col-md-8 col-md-offset-1 typewriter">
+            <!-- <p class="content">
               We are a new network channel specifically engaged in connecting
-              <strong>Fans, Athletes, Clubs, and Brands</strong> in the entire <strong>Sports World.</strong>
+              <strong>Fans, Athletes, Clubs, and Brands</strong> in the entire Sports World.
+            </p> -->
+            <p class="content show-mobile">
+              We believe that people are active by nature. We believe that
+              people are at the <strong>center</strong> of every sport. We are
+              <strong>committed</strong> to providing the
+              <strong>highest quality</strong> solutions to establish an
+              <strong>equilibrium</strong> between sports, innovation,
+              technology, and people.
             </p>
-            <p class="content">
-              We believe that people are active by nature. We believe that people
-              are at the center of every sport. We are committed to providing
-              the <strong>highest quality</strong> solutions to establish an <strong>equilibrium</strong> between sports, innovation, technology,
-              and people.
-            </p>
-            <p class="content">
-              We work with dedication to provide a new alternative that allows
-              you to experiment, enjoy, and live sports <strong>like never before.</strong>
+            <p class="content show-mobile">
+              We work with dedication to provide a new <strong>alternative</strong>
+              that allows you to experiment, enjoy, and live sports <strong>like never before.</strong>
             </p>
           </div>
         </div>
@@ -73,51 +76,83 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-1">
-            <div id="clubs-content" class="what-content">
-              <p class="content">
-                For our official partnered clubs we offer a personalized profile
-                on our network as well as a personalized shop where fans can purchase
-                gear, tickets, and tours of the clubs stadium.
-              </p>
-              <p class="content">
-                We expand fan outreach by connecting our growing network of users
-                to  all of the news surrounding your club.
-              </p>
-              <p class="content">
-                We've already done the work for you and we offer a great opportunity to
-                expand your existing social network to our global platform.
-              </p>
-            </div>
-            <div id="fans-content" class="what-content">
-              <p class="content">Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-            <div id="brands-content" class="what-content">
-              <p class="content">Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-            <div id="players-content" class="what-content">
-              <p class="content">Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
+            <ul class="slide">
+              <li>
+                <div id="clubs-content" class="what-content">
+                  <p class="content">
+                    For our official partnered clubs we offer a personalized profile
+                    on our network as well as a personalized shop where fans can purchase
+                    gear, tickets, and tours of the stadium.
+                  </p>
+                  <p class="content">
+                    We expand fan outreach by connecting our growing network of users
+                    to  all of the news surrounding your club.
+                  </p>
+                  <p class="content">
+                    We've already done the work for you and we offer a great opportunity to
+                    expand your existing social network to our global platform.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div id="fans-content" class="what-content">
+                  <p class="content">
+                    For the fans on our network we provide a personalized experience
+                    and help them connect to the clubs, players, brands that they are passionate about.
+                  </p>
+                  <p class="content">
+                    Fans have access to club schedules, match results,
+                    and player social activity.
+                  </p>
+                  <p class="content">
+                    For the most dedicated fans we offer the 9ineClub,
+                    an exclusive service for our exclusive fans to view the
+                    best content in the Sports World
+                  </p>
+                  <p class="content">
+                    Now included with our network fans have access to E-commerce which
+                    includes club, player, and brand merchandise as well as
+                    tickets to club events such as matches, camps, and tours.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div id="brands-content" class="what-content">
+                  <p class="content">
+                    We know brands are an important part of the Sports World.
+                    We want to help expand brand outreach and put their best
+                    products in our fans hands.
+                  </p>
+                  <p class="content">
+                    Brands have the opportunity to partner with us and have an
+                    exlusive spot to sell products to our community of
+                    fans on the 9ineSports Shop.
+                  </p>
+                  <p class="content">
+                    Not only can we increase brand sales, but we also increase
+                    their social network performance by connecting their media
+                    activity to thousands of new fans.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div id="players-content" class="what-content">
+                  <p class="content">
+                    For players we offer a dedicated group of fans to connect with,
+                    thus increasing their popularity. With increase popularity
+                    comes more sponsorships.
+                  </p>
+                  <p class="content">
+                    Not only do we connect our fans to their idols social
+                    activity on other networks such as Facebook and Twitter,
+                    but we also customize a personal page and profile for each player.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="col-md-5">
-            <div class="iphone-wrapper">
+            <div class="iphone-wrapper col-centered">
               <div id="clubs-image" class="iphone-image"></div>
               <div id="fans-image" class="iphone-image"></div>
               <div id="brands-image" class="iphone-image"></div>
