@@ -3,10 +3,11 @@ function main() {
   // hide navbar until user starts scrolling
   $('.navbar').hide();
 
-  var firstP = "<p class='content'>We believe that people are active by nature. We believe that people are at the <strong>center</strong> of every sport. We are <strong>committed</strong> to providing the <strong>highest quality</strong> solutions to establish an <strong>equilibrium</strong> between sports, innovation, technology, and people.</p>";
-  var secondP = '<p class="content">We work with dedication to provide a new <strong>alternative</strong> that allows you to experiment, enjoy, and live sports <strong>like never before.</strong></p>';
+  var firstP = "<p class='content'>We believe that people are active by nature. We believe that people are at the <strong>center</strong> of every sport.</p>";
+  var secondP = '<p class="content">We are <strong>committed</strong> to providing the <strong>highest quality</strong> solutions to establish an <strong>equilibrium</strong> between sports, innovation, technology, and people.</p>'
+  var thirdP = '<p class="content">We work with dedication to provide a new <strong>alternative</strong> that allows you to experiment, enjoy, and live sports <strong>like never before.</strong></p>';
 
-  var innerText = firstP + secondP,
+  var innerText = firstP + secondP + thirdP,
     i = 0,
     isTag,
     text;
@@ -101,6 +102,13 @@ function main() {
        }
      });
 
+   function isScrolledIntoView(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+      var elemTop = $(elem).offset().top + 500;
+      return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
    // Show Menu on Book
    $(window).bind('scroll', function() {
        var navHeight = $(window).height() - 100;
@@ -109,6 +117,8 @@ function main() {
        } else {
            $('.navbar-default').removeClass('on');
        }
+       updateNavLinks();
+
    });
 
    jQuery('body, .navbar-custom .nav li a').bind('click', function(e) {
@@ -122,6 +132,28 @@ function main() {
        target: '.navbar-default',
        offset: 80
    })
+
+   function updateNavLinks() {
+     if (isScrolledIntoView('#who')) {
+       $('.active-page').removeClass('active-page');
+       $('.who-link').addClass('active-page');
+     } else if (isScrolledIntoView('#what')){
+       $('.active-page').removeClass('active-page');
+       $('.what-link').addClass('active-page');
+     } else if (isScrolledIntoView('#benefits')){
+       $('.active-page').removeClass('active-page');
+       $('.benefits-link').addClass('active-page');
+     } else if (isScrolledIntoView('#partners')){
+       $('.active-page').removeClass('active-page');
+       $('.partners-link').addClass('active-page');
+     } else if (isScrolledIntoView('#institutions')){
+       $('.active-page').removeClass('active-page');
+       $('.institutions-link').addClass('active-page');
+     } else if (isScrolledIntoView('#contact')){
+       $('.active-page').removeClass('active-page');
+       $('.contact-link').addClass('active-page');
+     }
+   }
 
 }
 

@@ -6,6 +6,7 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 	line-height: 1.7em;
+	font-weight: 700;
 }
 
 ul, ol {
@@ -13,6 +14,40 @@ ul, ol {
 	padding: 0;
 	webkit-padding: 0;
 	moz-padding: 0;
+}
+
+.section-title hr{
+	height: 4px;
+	width: 150px;
+	text-align: center;
+	position: relative;
+	background: #38c0c9;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	border: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+
+.active-page {
+	color: #38c0c9 !important;
 }
 
 .navbar-custom {
@@ -59,7 +94,7 @@ ul, ol {
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
 	outline: 0;
 	background-color: transparent;
-	color: #38c0c9;
+	/*color: #38c0c9;*/
 }
 .navbar-custom .nav li.active {
 	outline: 0;
@@ -195,8 +230,8 @@ p {
   background: url(../img/mockups/mockup_idol.png);
 }
 
-/* Audience Section */
-#audience {
+/* benefits Section */
+#benefits {
   height: 100%;
   width: 100%;
   padding: 60px 0;
@@ -208,7 +243,7 @@ p {
   background-position: left 25%;
 }
 
-#audience .description {
+#benefits .description {
 	/*font-weight: bold;*/
 }
 
@@ -231,6 +266,7 @@ p {
 
 .card {
   background: #333;
+	/*cursor: pointer;*/
 }
 
 .card-active {
@@ -466,6 +502,10 @@ p {
 	#who, #what {
 		height: 120%;
 	}
+
+	.right {
+		float: right;
+	}
 }
 
 @media (max-width: 648px) {
@@ -475,17 +515,31 @@ p {
     text-align: center;
 	}
 
+	.audience-title {
+		text-align: center;
+	}
+
+	.next-card, .prev-card {
+		width: 30px !important;
+		height: 35px !important;
+	}
+
+	#benefits .description {
+		font-size: 1em;
+		text-align: center;
+	}
+
 .respond-mobile {
 	max-width: 80%;
 	margin: 0 auto;
 }
 
-	#audience, #engagement {
+	#benefits, #engagement {
 		height:auto;
 		padding-top: 20px;
 	}
 
-	#audience {
+	#benefits {
 		background-position: 40%;
 	}
 
@@ -601,12 +655,12 @@ p {
 	height: 100%;
   width: 100%;
   /*padding: 60px 0;*/
-  background: url(../img/backgrounds/bg-partners.jpg);
+  background: url(../img/backgrounds/bg-contact.jpg);
   -webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
-  background-position: left 25%;
+  background-position: center;
 }
 
 .swiper-title {
@@ -620,15 +674,19 @@ p {
 	z-index: 10;
 }
 
-.swiper-button-next, .swiper-button-prev {
+
+.next-card {
+	right: -30px !important;
+	position: relative;
+}
+
+.prev-card {
+	left: -30px !important;
+	position: relative;
+}
+
+.next-award, .next-institution, .prev-award, .prev-institution {
 	top: 65% !important;
-	/*background-color: rgba(56,192,201,0.8);
-	border-radius: 6px;
-	width: 35px !important;
-	height: 64px !important;
-	-moz-background-size: 35px 64px;
-  -webkit-background-size: 35px 64px;
-  background-size: 35px 64px !important;*/
 }
 
 
@@ -642,4 +700,179 @@ p {
 
 .swiper-outer {
 	position: relative;
+}
+
+#partners {
+	height: 100%;
+	width: 100%;
+	background: #333;
+}
+
+.partners {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.partner {
+	padding-top: 80px;
+}
+
+.partner-thumbnail {
+	background:transparent;
+	border:none;
+	box-shadow: none;
+}
+
+.partners a {
+	color: #38c0c9;
+}
+
+.partner-thumbnail .caption {
+	text-align: center;
+	font-size: 1.5em;
+	padding: 0;
+}
+
+.partner-thumbnail .caption p {
+	color: #333 !important;
+}
+
+.espanyol {
+	height: 100%;
+	width: 100%;
+	background: url(../img/backgrounds/bg-espanyol.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/*border-top: 2px solid #333;*/
+}
+
+.reus {
+	height: 100%;
+	width: 100%;
+	background: url(../img/backgrounds/bg-reus.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/*border-top: 2px solid #333;*/
+}
+
+/* Contact Section */
+#contact {
+	padding: 60px 0 40px 0;
+	/*background: #f6f6f6;*/
+  background: url(../img/backgrounds/bg-people-11.jpg);
+	position: relative;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+  color: #333;
+}
+#contact .contact-item {
+	padding: 10px;
+	margin: 10px;
+	height: 100px;
+	border-radius: 4px;
+}
+#contact h2 {
+	font-size: 3em;
+	margin-top: 40px;
+  color: #333;
+}
+
+
+#contact form {
+	padding: 30px 0;
+}
+#contact i.fa {
+	font-size: 22px;
+	color: #38c0c9;
+	margin-bottom: 10px;
+}
+#contact .text-danger {
+	color: #ff3333;
+	text-align: left;
+}
+label {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	float: left;
+}
+#contact .form-control {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #fff;
+	background-color: #333;
+	background-image: none;
+	border: none;
+	border-radius: 6px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+#contact .form-control:focus {
+	border-color: #38c0c9;
+	outline: 0;
+	-webkit-box-shadow: 0 0 10px #38c0c9;
+  -moz-box-shadow: 0 0 10px #38c0c9;
+	box-shadow: 0 0 10px #38c0c9;
+}
+#contact .btn-default {
+	background: #38c0c9;
+	border: 0;
+	border-radius: 4px;
+	padding: 10px 20px;
+	color: #333;
+	margin-top: 15px;
+	font-size: 15px;
+}
+#contact .btn-default:hover, #contact .btn-default:focus {
+	background: #38c0c9;
+	-webkit-box-shadow: inset 0 0 20px #333;
+  -moz-box-shadow: inset 0 0 20px #333;
+	box-shadow: inset 0 0 20px #333;
+}
+
+#contact .social ul {
+	margin-top: 30px;
+}
+#contact .social ul li {
+	display: inline-block;
+	margin: 0 20px;
+}
+#contact .social i.fa {
+	font-size: 24px;
+	padding-top: 8px;
+	/*#cf5022*/
+	color: #38c0c9;
+	border-radius: 4px;
+	transition: all 0.3s;
+}
+#contact .social i.fa:hover {
+	color: rgba(135,180,255,1);
+}
+
+#contact .fa:hover {
+	color: rgba(135,180,255,1);
+}
+
+#contact .content {
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+	background-color: lightgrey;
 }
