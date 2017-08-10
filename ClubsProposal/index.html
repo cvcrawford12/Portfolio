@@ -31,6 +31,7 @@
             <li> <a class="page-scroll who-link" href="#who">Who We Are</a></li>
             <li> <a class="page-scroll what-link" href="#what">What We Do</a></li>
             <li> <a class="page-scroll benefits-link" href="#benefits">Benefits</a></li>
+            <li> <a class="page-scroll implementation-link" href="#implementation">Implementation</a></li>
             <li> <a class="page-scroll partners-link" href="#partners">Partners</a></li>
             <li> <a class="page-scroll institutions-link" href="#institutions">Institutions</a></li>
             <li> <a class="page-scroll contact-link" href="#contact">Contact</a></li>
@@ -353,6 +354,89 @@
     </div>
   </section>
 
+  <section id="implementation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="swiper-button-next swiper-button-black next-stage"></div>
+          <div class="swiper-button-prev swiper-button-black prev-stage"></div>
+          <div class="swiper-container implementation-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="implementation-header">
+                  <h1>Implementation <span class="small">Stage 1</span></h1>
+                </div>
+                <div class="col-lg-12">
+                  <img class="img-responsive" src="img/stage1.png">
+                  <div class="implementation-footer">
+                    <p>
+                      Inclusion of a "digital certificate"
+                      on the Club's profile page to officially display the Club's content.
+                      At this stage we will also connect the clubs social media feed to the platform
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="implementation-header">
+                  <h1>Implementation <span class="small">Stage 2</span></h1>
+                </div>
+                <div class="col-lg-12">
+                  <img class="img-responsive" src="img/stage2.png">
+                  <div class="implementation-footer">
+                    <p>
+                      Connect your official tickets to Matches, Academies,
+                      Camps, and Tours onto the platform
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="implementation-header">
+                  <h1>Implementation <span class="small">Stage 3</span></h1>
+                </div>
+                <div class="col-lg-12">
+                  <img class="img-responsive" src="img/stage3.png">
+                  <div class="implementation-footer">
+                    <p>
+                      Integrate your Club's official online store to
+                      sell merchandise through our platform
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="implementation-header">
+                  <h1>Implementation <span class="small">Stage 4</span></h1>
+                </div>
+                <div class="col-lg-12">
+                  <img class="img-responsive" src="img/stage4.png">
+                  <div class="implementation-footer">
+                    <p>
+                      We will create and publicize exclusive content for 9Club members related to your Club, Players, and History
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="implementation-pagination-wrapper">
+                <div class="implementation-inner-wrapper">
+                  <div><span class="implementation-active"><i class="fa fa-check-circle fa-3x"></i></span></div>
+                  <div><span><i class="fa fa-calendar fa-3x"></i></span></div>
+                  <div><span><i class="fa fa-shopping-cart fa-3x"></i></span></div>
+                  <div><span><i class="fa fa-camera fa-3x"></i></span></div>
+                </div>
+                <hr>
+              </div>​
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section id="partners">
     <!-- Swiper -->
     <div class="swiper-container partners">
@@ -380,7 +464,7 @@
           <div class="swiper-container institutions">
             <div class='swiper-title section-title'>
               <h1>Institutions</h1>
-              <hr>
+              <!-- <hr> -->
             </div>
             <div class="swiper-wrapper awards-wrapper">
                 <div class="swiper-slide"><img class="img-responsive respond-mobile" src="img/institutions/bau.png"></div>
@@ -405,8 +489,8 @@
         <div class="swiper-inner center-block">
           <div class="swiper-container awards" dir="rtl">
             <div class='swiper-title section-title'>
-              <h1>Our Awards</h1>
-              <hr>
+              <h1>Awards</h1>
+              <!-- <hr> -->
             </div>
             <div class="swiper-wrapper awards-wrapper">
                 <div class="swiper-slide"><img class="img-responsive respond-mobile" src="img/institutions/bau.png"></div>
@@ -527,9 +611,10 @@
       crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/implementationSwiper.js"></script>
 
     <script>
     var swiper = new Swiper('.institutions', {
@@ -581,9 +666,7 @@
     });
 
     var partnersSwiper = new Swiper('.partners', {
-        pagination: '.swiper-pagination',
         slidesPerView: 2,
-        paginationClickable: true,
         spaceBetween: 2,
         freeMode: true,
         loop:true,

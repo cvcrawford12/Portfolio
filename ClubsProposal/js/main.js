@@ -3,6 +3,7 @@ function main() {
   // hide navbar until user starts scrolling
   $('.navbar').hide();
 
+
   var firstP = "<p class='content'>We believe that people are active by nature. We believe that people are at the <strong>center</strong> of every sport.</p>";
   var secondP = '<p class="content">We are <strong>committed</strong> to providing the <strong>highest quality</strong> solutions to establish an <strong>equilibrium</strong> between sports, innovation, technology, and people.</p>'
   var thirdP = '<p class="content">We work with dedication to provide a new <strong>alternative</strong> that allows you to experiment, enjoy, and live sports <strong>like never before.</strong></p>';
@@ -143,6 +144,9 @@ function main() {
      } else if (isScrolledIntoView('#benefits')){
        $('.active-page').removeClass('active-page');
        $('.benefits-link').addClass('active-page');
+     } else if (isScrolledIntoView('#implementation')){
+       $('.active-page').removeClass('active-page');
+       $('.implementation-link').addClass('active-page');
      } else if (isScrolledIntoView('#partners')){
        $('.active-page').removeClass('active-page');
        $('.partners-link').addClass('active-page');
