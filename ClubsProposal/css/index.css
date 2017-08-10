@@ -139,7 +139,7 @@ p {
 #who {
   height: 100%;
   width: 100%;
-  padding: 80px 0;
+  padding: 60px 0;
   background: url(../img/backgrounds/bg-people-1.jpg);
   -webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -560,6 +560,22 @@ p {
     text-align: center;
 	}
 
+	#who .logo {
+		padding-bottom: 5%;
+	}
+
+	.next-stage, .prev-stage {
+		top: 45% !important;
+	}
+
+	.card-wrapper {
+		display: none;
+	}
+
+	.show-on-mobile {
+		display: block;
+	}
+
 	.audience-title {
 		text-align: center;
 	}
@@ -595,14 +611,6 @@ p {
 		background-size: cover;
 		-o-background-size: cover;
 		background-position: 70%;
-	}
-
-	#engagement .description {
-		/*color: #fff;*/
-	}
-
-	.hide-mobile {
-		display: none;
 	}
 
 	#who .show-mobile {
