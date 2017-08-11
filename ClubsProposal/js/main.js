@@ -146,10 +146,7 @@ function main() {
    // Check which section is in view and update its color on the nav link
    // adding class active-page changes color to #38c0c9
    function updateNavLinks() {
-     if (isScrolledIntoView('#who')) {
-       $('.active-page').removeClass('active-page');
-       $('.who-link').addClass('active-page');
-     } else if (isScrolledIntoView('#what')){
+     if (isScrolledIntoView('#what')){
        $('.active-page').removeClass('active-page');
        $('.what-link').addClass('active-page');
      } else if (isScrolledIntoView('#benefits')){
@@ -164,6 +161,9 @@ function main() {
      } else if (isScrolledIntoView('#institutions')){
        $('.active-page').removeClass('active-page');
        $('.institutions-link').addClass('active-page');
+     } else if (isScrolledIntoView('#awards')){
+       $('.active-page').removeClass('active-page');
+       $('.awards-link').addClass('active-page');
      } else if (isScrolledIntoView('#contact')){
        $('.active-page').removeClass('active-page');
        $('.contact-link').addClass('active-page');

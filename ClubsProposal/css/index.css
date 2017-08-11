@@ -9,10 +9,6 @@ body, html {
 	font-weight: 700;
 }
 
-.card-wrapper {
-	display: none;
-}
-
 .show-on-mobile {
 	display: block;
 }
@@ -317,23 +313,6 @@ strong {
 }
 
 
-/* Engagement Section */
-#engagement {
-  height: 100%;
-  width: 100%;
-  padding: 60px 0;
-  background: url(../img/backgrounds/bg-people-8.jpg);
-  -webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-  background-position: top;
-}
-
-#engagement .description {
-	color: #333;
-}
-
 .card {
   background: #333;
 	/*cursor: pointer;*/
@@ -345,7 +324,6 @@ strong {
 }
 
 .caption > * {
-	/*color: #38c0c9;*/
 	color: #fff;
 }
 
@@ -622,6 +600,59 @@ strong {
 	}
 }
 
+@media (max-width: 1025px) {
+	.benefits-graphic {
+		max-width: 40%;
+		height: auto;
+	}
+
+	#who .show-mobile {
+		display: block;
+	}
+
+	.iphone-col {
+		margin-right: 5%;
+	}
+
+}
+
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
 @media (max-width: 648px) {
 	#who .content {
 		font-size: 1em;
@@ -663,11 +694,6 @@ strong {
 		margin-top: 10%;
 	}
 
-	.benefits-graphic {
-		max-width: 60%;
-		height: auto;
-	}
-
 	#who .logo {
 		padding-bottom: 5%;
 	}
@@ -675,14 +701,6 @@ strong {
 	.next-stage, .prev-stage {
 		top: 45% !important;
 	}
-
-	/*.card-wrapper {
-		display: none;
-	}*/
-
-	/*.show-on-mobile {
-		display: block;
-	}*/
 
 	.audience-title {
 		text-align: center;
@@ -719,10 +737,6 @@ strong {
 		background-size: cover;
 		-o-background-size: cover;
 		background-position: 70%;
-	}
-
-	#who .show-mobile {
-		display: block;
 	}
 
 	.col-centered {
@@ -777,36 +791,6 @@ strong {
 	font-size: 2em;
 	margin-bottom: 5%;
 	line-height: 1em;
-}
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  padding-left: 0;
-  margin-left: -30%;
-  text-align: center;
-  list-style: none;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 1px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: none;
-  background-color: none;
-  border: none;
-  border-radius: none;
-}
-.carousel-indicators .active {
-  width:50px;
-  height: 50px;
-  margin: 0;
-  background-color: none;
 }
 
 .icon {
@@ -900,6 +884,7 @@ strong {
 
 .partner-description {
 	font-weight: 400;
+	margin-top: 10px;
 }
 
 .espanyol {
@@ -1023,10 +1008,6 @@ label {
 	color: rgba(135,180,255,1);
 }
 
-#contact .fa:hover {
-	color: rgba(135,180,255,1);
-}
-
 #contact .content {
 	font-size: 1.2em;
 	text-align: center;
@@ -1059,11 +1040,16 @@ label {
 .associations-container {
 	margin: 0 auto;
 	float: none;
-	margin-top: 15%;
+	/*margin-top: 15%;*/
 	display: flex;
 	display: -ms-flexbox;
   display: -webkit-flex;
 	justify-content: space-between;
+}
+
+#associations .partner-header {
+	margin-top: 4%;
+	margin-bottom: 7%;
 }
 
 .association-name {
@@ -1075,4 +1061,67 @@ label {
 	color: #38c0c9;
 	text-align: center;
 	font-size: 2em;
+}
+
+
+/**********************/
+/* Awards Section*/
+/**********************/
+#awards {
+	height: 100%;
+  width: 100%;
+  padding: 60px 0;
+  background: url(../img/backgrounds/bg-kids-2.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: top;
+	color: #333;
+	text-align: center;
+}
+#awards a {
+	color: #333;
+}
+
+.awards-slider {
+  text-align: center;
+  margin: 35px auto 10px auto;
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+.awards-slider .section-title h1 {
+	color: #333;
+}
+
+.awards-slider ul {
+  list-style: none;
+	margin-bottom: 2%;
+	padding: 0;
+	display: block;
+}
+
+.awards-slider ul li {
+  margin-right: 15px;
+	margin-bottom: 4px;
+  display: inline-block;
+}
+
+.awards-slider ul li img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* Negotiations Section */
+#negotiations {
+	height: 100%;
+  width: 100%;
+  background: url(../img/backgrounds/bg-map.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: bottom;
 }
