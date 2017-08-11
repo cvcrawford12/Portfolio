@@ -9,6 +9,14 @@ body, html {
 	font-weight: 700;
 }
 
+.card-wrapper {
+	display: none;
+}
+
+.show-on-mobile {
+	display: block;
+}
+
 ul, ol {
 	list-style: none;
 	padding: 0;
@@ -159,7 +167,7 @@ p {
   padding-bottom: 15%;
 }
 
-#who strong {
+strong {
   color: #38c0c9;
 }
 
@@ -223,7 +231,7 @@ p {
   background: url(../img/mockups/mockup_club.png);
 }
 
-#fans-image {
+#action-image {
   background: url(../img/mockups/mockup_fan.png);
 }
 
@@ -235,12 +243,16 @@ p {
   background: url(../img/mockups/mockup_idol.png);
 }
 
+#match-image {
+  background: url(../img/mockups/mockup_idol.png);
+}
+
 /* benefits Section */
 #benefits {
   height: 100%;
   width: 100%;
   padding: 60px 0;
-  background: url(../img/backgrounds/bg-kids-1.jpg);
+  background: url(../img/backgrounds/bg-people-9.jpg);
   -webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -248,9 +260,62 @@ p {
   background-position: left 25%;
 }
 
-#benefits .description {
-	/*font-weight: bold;*/
+.branding {
+	height: 100%;
+  width: 100%;
+  padding: 60px 0;
+  background: url(../img/backgrounds/bg-people-11.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
 }
+
+.engagement {
+	height: 100%;
+  width: 100%;
+  padding: 60px 0;
+  background: url(../img/backgrounds/bg-people-10.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
+}
+
+.growth {
+	height: 100%;
+  width: 100%;
+  padding: 60px 0;
+  background: url(../img/backgrounds/bg-kids-3.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
+}
+
+.revenue {
+	height: 100%;
+  width: 100%;
+  padding: 60px 0;
+  background: url(../img/backgrounds/bg-kids-4.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
+}
+
+.growth .pull-down {
+	margin-top: 25%;
+}
+
+.pull-down {
+	margin-top: 10%;
+}
+
 
 /* Engagement Section */
 #engagement {
@@ -276,6 +341,7 @@ p {
 
 .card-active {
 	background: #38c0c9;
+	transition: .3s ease-in-out;
 }
 
 .caption > * {
@@ -388,7 +454,7 @@ p {
 
 /* implementation section */
 #implementation {
-	height: 120%;
+	height: 100%;
   width: 100%;
   padding: 60px 0 400px 0;
 	background: url(../img/backgrounds/bg-people-6.jpg);
@@ -544,12 +610,15 @@ p {
 
 /* Media Queries */
 @media (min-width: 1025px) {
-	#who, #what {
+	#who {
 		height: 120%;
 	}
 
 	.right {
 		float: right;
+	}
+	.pull-down-reus {
+		margin-top: 25%;
 	}
 }
 
@@ -560,6 +629,45 @@ p {
     text-align: center;
 	}
 
+	.pull-down-reus {
+		margin-top: 65%;
+	}
+
+	.partner-header h1 {
+		font-size: 2em !important;
+	}
+
+	.partner-img {
+		max-width: 40%;
+		height: auto;
+		padding-bottom: 10px !important;
+	}
+
+	.association-img {
+		max-width: 60%;
+	}
+
+	.association-name {
+		font-size: 1.2em;
+	}
+
+	.associations-container {
+		margin-top: 35% !important;
+	}
+
+	.association-location {
+		font-size: 1em !important;
+	}
+
+	.growth .pull-down {
+		margin-top: 10%;
+	}
+
+	.benefits-graphic {
+		max-width: 60%;
+		height: auto;
+	}
+
 	#who .logo {
 		padding-bottom: 5%;
 	}
@@ -568,13 +676,13 @@ p {
 		top: 45% !important;
 	}
 
-	.card-wrapper {
+	/*.card-wrapper {
 		display: none;
-	}
+	}*/
 
-	.show-on-mobile {
+	/*.show-on-mobile {
 		display: block;
-	}
+	}*/
 
 	.audience-title {
 		text-align: center;
@@ -585,9 +693,9 @@ p {
 		height: 35px !important;
 	}
 
-	#benefits .description {
-		font-size: 1em;
-		text-align: center;
+	.description {
+		font-size: 1.2em !important;
+		text-align: left;
 	}
 
 .respond-mobile {
@@ -659,12 +767,16 @@ p {
 
 .audience-title {
 	color: #38c0c9;
+	font-size: 2.5em;
+	margin-bottom: 20px;
 	/*border-bottom: 2px solid #38c0c9;*/
 	/*text-align: center;*/
 }
 
 .description {
-	font-size: 1.2em;
+	font-size: 2em;
+	margin-bottom: 5%;
+	line-height: 1em;
 }
 
 .carousel-indicators {
@@ -761,34 +873,33 @@ p {
 	background: #333;
 }
 
+#partners .pull-down {
+	margin-top: 15%;
+}
+
 .partners {
 	height: 100%;
 	width: 100%;
 	position: relative;
 }
 
-.partner {
-	padding-top: 80px;
-}
-
-.partner-thumbnail {
-	background:transparent;
-	border:none;
-	box-shadow: none;
-}
-
 .partners a {
 	color: #38c0c9;
 }
 
-.partner-thumbnail .caption {
-	text-align: center;
-	font-size: 1.5em;
-	padding: 0;
+.partner-header {
+	margin: 8% 0 0 5%;
+	color: #333;
 }
 
-.partner-thumbnail .caption p {
-	color: #333 !important;
+.partner-header h1 {
+	font-size: 4em;
+	border-bottom: 2px solid #38c0c9;
+	display: table;
+}
+
+.partner-description {
+	font-weight: 400;
 }
 
 .espanyol {
@@ -798,7 +909,6 @@ p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	/*border-top: 2px solid #333;*/
 }
 
 .reus {
@@ -808,14 +918,12 @@ p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	/*border-top: 2px solid #333;*/
 }
 
 /* Contact Section */
 #contact {
 	padding: 60px 0 40px 0;
-	/*background: #f6f6f6;*/
-  background: url(../img/backgrounds/bg-people-11.jpg);
+  background: url(../img/backgrounds/bg-contact.jpg);
 	position: relative;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -928,4 +1036,43 @@ label {
 	height: 400px;
 	width: 100%;
 	background-color: lightgrey;
+}
+
+
+/* Associations Section */
+#associations {
+	height: 100%;
+  width: 100%;
+  padding: 60px 0;
+  background: url(../img/backgrounds/bg-partners.jpg);
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  background-position: center;
+}
+
+.association-img {
+	margin: 0 auto;
+}
+
+.associations-container {
+	margin: 0 auto;
+	float: none;
+	margin-top: 15%;
+	display: flex;
+	display: -ms-flexbox;
+  display: -webkit-flex;
+	justify-content: space-between;
+}
+
+.association-name {
+	text-align: center;
+	color: #333;
+}
+
+.association-location {
+	color: #38c0c9;
+	text-align: center;
+	font-size: 2em;
 }

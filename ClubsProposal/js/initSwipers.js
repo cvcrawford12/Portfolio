@@ -7,7 +7,7 @@ function main() {
 
   var swiper = new Swiper('.institutions', {
       pagination: '.institutions-pagination',
-      slidesPerView: 4,
+      slidesPerView: 3,
       paginationClickable: true,
       spaceBetween: 30,
       nextButton: '.next-institution',
@@ -23,7 +23,7 @@ function main() {
         },
         // when window width is <= 640px
         640: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 30
         }
       }
@@ -54,9 +54,10 @@ function main() {
   });
 
   var partnersSwiper = new Swiper('.partners', {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 1,
-      freeMode: true,
+      nextButton: '.next-partner',
+      prevButton: '.prev-partner',
       loop:true,
       breakpoints: {
         // when window width is <= 480px

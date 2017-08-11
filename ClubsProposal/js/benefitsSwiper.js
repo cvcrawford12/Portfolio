@@ -27,6 +27,9 @@ function main() {
         // Show active card if mobile and add active class
         $(cards[index]).addClass('card-active');
         $(cardWrappers[index]).addClass('animated fadeIn show-on-mobile');
+        if (window.scree.size <= 648) {
+
+        }
       });
     });
   }
