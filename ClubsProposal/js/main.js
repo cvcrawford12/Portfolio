@@ -155,7 +155,7 @@ function main() {
      } else if (isScrolledIntoView('#implementation')){
        $('.active-page').removeClass('active-page');
        $('.implementation-link').addClass('active-page');
-     } else if (isScrolledIntoView('#partners')){
+     } else if (isScrolledIntoView('#partners') || isScrolledIntoView('.revenue')){
        $('.active-page').removeClass('active-page');
        $('.partners-link').addClass('active-page');
      } else if (isScrolledIntoView('#institutions')){
