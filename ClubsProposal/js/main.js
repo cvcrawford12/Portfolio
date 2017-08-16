@@ -14,20 +14,25 @@ function main() {
       isTag,
       text;
 
+    // Actual typing effect
     function type() {
-        text = innerText.slice(0, ++i);
-        if (text === innerText) return;
+      // Go letter by letter until completed full text
+      text = innerText.slice(0, ++i);
+      if (text === innerText) return;
 
-        document.querySelector('.typewriter').innerHTML = text;
+      // Set innerHtml rather than textContent to allow for <strong> tags
+      document.querySelector('.typewriter').innerHTML = text;
 
-        var char = text.slice(-1);
-        if( char === '<' ) isTag = true;
-        if( char === '>' ) isTag = false;
+      // If the last character is an open tag then recursively type
+      var char = text.slice(-1);
+      if( char === '<' ) isTag = true;
+      if( char === '>' ) isTag = false;
 
-        if (isTag) return type();
+      if (isTag) return type();
 
-        // Adjust timing of typewriter
-        setTimeout(type, 10);
+      // Adjust timing of typewriter, this only fires if we make it all the way through
+      // i.e we aren't finished typing, and it isn't a <> character
+      setTimeout(type, 10);
     }
 
     // if we aren't mobile then perform type animation
@@ -149,13 +154,13 @@ function main() {
      if (isScrolledIntoView('#what')){
        $('.active-page').removeClass('active-page');
        $('.what-link').addClass('active-page');
-     } else if (isScrolledIntoView('#benefits')){
+     } else if (isScrolledIntoView('#benefits') || isScrolledIntoView('.revenue')){
        $('.active-page').removeClass('active-page');
        $('.benefits-link').addClass('active-page');
      } else if (isScrolledIntoView('#implementation')){
        $('.active-page').removeClass('active-page');
        $('.implementation-link').addClass('active-page');
-     } else if (isScrolledIntoView('#partners') || isScrolledIntoView('.revenue')){
+     } else if (isScrolledIntoView('#partners')){
        $('.active-page').removeClass('active-page');
        $('.partners-link').addClass('active-page');
      } else if (isScrolledIntoView('#institutions')){
@@ -172,7 +177,7 @@ function main() {
 
    // Simple function to check which section is in view
    function isScrolledIntoView(elem) {
-      // Adjust height offset for customization
+      // Adjust heightOffset for customization
       var heightOffset = 500;
       var docViewTop = $(window).scrollTop();
       var docViewBottom = docViewTop + $(window).height();

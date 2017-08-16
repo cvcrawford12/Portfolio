@@ -196,9 +196,9 @@ strong {
 }
 
 #what .content {
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #333;
-  margin-top: 4%;
+  margin-top: 2%;
   line-height: 1.2em;
 }
 
@@ -310,7 +310,7 @@ strong {
 }
 
 .growth .pull-down {
-	margin-top: 20%;
+	margin-top: 15%;
 }
 
 .pull-down {
@@ -601,12 +601,14 @@ strong {
 		float: right;
 	}
 	.pull-down-reus {
-		margin-top: 25%;
+		margin-top: 10%;
 	}
 
 	.pull-down-espanyol {
 		margin-top: 5%;
 	}
+
+
 }
 
 @media (max-width: 1025px) {
@@ -734,7 +736,7 @@ strong {
 	}
 
 	.description {
-		font-size: 1.2em !important;
+		font-size: 1.5em !important;
 		text-align: left;
 	}
 
@@ -900,6 +902,7 @@ strong {
 .partner-header {
 	margin: 8% 0 0 5%;
 	color: #333;
+	/*color: #fff;*/
 }
 
 .partner-header h1 {
@@ -911,24 +914,51 @@ strong {
 .partner-description {
 	font-weight: 400;
 	margin-top: 10px;
+	color: #333;
+}
+
+.reus .partner-description, .reus .partner-header h1 {
+	color: #fff;
 }
 
 .espanyol {
 	height: 100%;
 	width: 100%;
-	background: url(../img/backgrounds/bg-espanyol.jpg);
+	background: linear-gradient(to bottom, rgba(230, 230, 230, 0.6), rgba(230, 230, 230, 0.6), rgba(0, 74, 121, 0.6), rgba(0, 74, 121, 0.6)), url(../img/backgrounds/espanyol-grey.jpg);
+	/*background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(40, 40, 40, 0.6)), url(../img/backgrounds/reus-bg-red.gif);*/
+	/*background: url(../img/backgrounds/bg-espanyol.jpg);*/
 	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
 	background-size: cover;
+	-o-background-size: cover;
 	background-position: center;
 }
 
 .reus {
 	height: 100%;
 	width: 100%;
-	background: url(../img/backgrounds/bg-reus.jpg);
+	/*background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(40, 40, 40, 0.6)), url(../img/backgrounds/reus-bg-red.gif);*/
+	background: linear-gradient(to bottom, rgba(190, 190, 190, 0.6), rgba(190, 190, 190, 0.6), rgba(116,17,11, 0.6), rgba(116,17,11, 0.6)), url(../img/backgrounds/reus-bg-grey.jpg);
 	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
 	background-size: cover;
+	-o-background-size: cover;
 	background-position: center;
+}
+
+.csd-partner {
+	height: 100%;
+	width: 100%;
+	/*background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(40, 40, 40, 0.6)), url(../img/backgrounds/reus-bg-red.gif);*/
+	background: url(../img/backgrounds/bg-csd.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	background-position: top;
 }
 
 /* Contact Section */
@@ -1093,7 +1123,7 @@ label {
 /* Awards Section*/
 /**********************/
 #awards {
-	height: 100%;
+	height: 110%;
   width: 100%;
   padding: 60px 0;
   background: url(../img/backgrounds/bg-kids-2.jpg);

@@ -10,13 +10,15 @@ function main() {
     // grab each of the page indicators and turn to array
     var pages = document.querySelector('.implementation-inner-wrapper').querySelectorAll('span');
     var pagesArray = Array.from(pages);
-    
+
     // add a listener
     pagesArray.forEach(function(page) {
 
       //  grab index of clicked page and adjust the css to be active
       page.addEventListener('click', function() {
         var index = pagesArray.indexOf(page);
+
+        // helper function to adjust the active page
         adjustActiveClass(pagesArray, index);
 
         // using the pages index adjust swiper content
@@ -24,24 +26,26 @@ function main() {
       });
     });
 
-    // if a swiper arrow is clicked, handle similar to page indicators
+    // if a swiper arrow is clicked call helper function
     handleSwiperArrowClick('.next-stage', pagesArray);
     handleSwiperArrowClick('.prev-stage', pagesArray);
   }
   changePage();
 
-  // grab index with swiper's method
-  // change the swiper to that index and update css
+
   function handleSwiperArrowClick(arrow, pagesArray) {
     $(arrow).on('click', function() {
+      // grab index with swiper's method
       var index = implementationSwiper.activeIndex;
+
+      // change the swiper to that index and update css
       adjustActiveClass(pagesArray, index);
     });
   }
 
 
   function adjustActiveClass(pagesArray, index) {
-    // percentages for the width of active page indicator underline
+    // percentages for the width of active page indicator underline (hr element)
     var percentages = ['0%', '25%', '50%', '75%'];
 
     // remove the blue highlight on the active page indicator
