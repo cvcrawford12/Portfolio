@@ -256,6 +256,11 @@ strong {
   background-position: left 25%;
 }
 
+.benefits-graphic {
+	max-width: 70%;
+	height: auto;
+}
+
 .branding {
 	height: 100%;
   width: 100%;
@@ -305,7 +310,7 @@ strong {
 }
 
 .growth .pull-down {
-	margin-top: 25%;
+	margin-top: 20%;
 }
 
 .pull-down {
@@ -432,7 +437,7 @@ strong {
 
 /* implementation section */
 #implementation {
-	height: 100%;
+	height: 110%;
   width: 100%;
   padding: 60px 0 400px 0;
 	background: url(../img/backgrounds/bg-people-6.jpg);
@@ -670,6 +675,11 @@ strong {
 
 	#partners .partner-description {
 		text-align: center;
+	}
+
+	#awards {
+		width: 100%;
+		height: auto !important;
 	}
 
 	.pull-down-reus {
