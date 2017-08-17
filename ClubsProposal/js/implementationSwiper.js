@@ -32,6 +32,32 @@ function main() {
   }
   changePage();
 
+  function changeStep() {
+    // grab each of the page indicators and turn to array
+    var pages = document.querySelector('.implementation-inner-wrapper').querySelectorAll('li');
+    var pagesArray = Array.from(pages);
+
+    // add a listener
+    pagesArray.forEach(function(page) {
+
+      //  grab index of clicked page and adjust the css to be active
+      page.addEventListener('click', function() {
+        var index = pagesArray.indexOf(page);
+
+        // helper function to adjust the active page
+        adjustActiveClass(pagesArray, index);
+
+        // using the pages index adjust swiper content
+        implementationSwiper.slideTo(index);
+      });
+    });
+
+    // if a swiper arrow is clicked call helper function
+    handleSwiperArrowClick('.next-stage', pagesArray);
+    handleSwiperArrowClick('.prev-stage', pagesArray);
+  }
+  changeStep();
+
 
   function handleSwiperArrowClick(arrow, pagesArray) {
     $(arrow).on('click', function() {
@@ -49,16 +75,18 @@ function main() {
     var percentages = ['0%', '25%', '50%', '75%'];
 
     // remove the blue highlight on the active page indicator
-    $('.implementation-active').removeClass('implementation-active');
+    // $('.implementation-active').removeClass('implementation-active');
 
     // adjust the left margin of the active underline
-    $('#implementation hr').css({
-      'margin-left' : percentages[index],
-      'position' : 'relative'
-    });
+    // $('#implementation hr').css({
+    //   'margin-left' : percentages[index],
+    //   'position' : 'relative'
+    // });
 
     // add blue hightlight to the now active slide
-    $(pagesArray[index]).addClass('implementation-active');
+    // $(pagesArray[index]).addClass('implementation-active');
+    $('.active-step').removeClass('active-step');
+    $(pagesArray[index]).addClass('active-step');
   }
 
 }
