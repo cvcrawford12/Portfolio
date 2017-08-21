@@ -60,13 +60,20 @@ function main() {
 
 
   function handleSwiperArrowClick(arrow, pagesArray) {
-    $(arrow).on('click', function() {
+    arrow.addEventListener('click', function() {
       // grab index with swiper's method
       var index = implementationSwiper.activeIndex;
 
       // change the swiper to that index and update css
       adjustActiveClass(pagesArray, index);
     });
+    // $(arrow).on('click', function() {
+    //   // grab index with swiper's method
+    //   var index = implementationSwiper.activeIndex;
+    //
+    //   // change the swiper to that index and update css
+    //   adjustActiveClass(pagesArray, index);
+    // });
   }
 
 
@@ -74,14 +81,7 @@ function main() {
     // percentages for the width of active page indicator underline (hr element)
     var percentages = ['0%', '25%', '50%', '75%'];
 
-    // remove the blue highlight on the active page indicator
-    // $('.implementation-active').removeClass('implementation-active');
 
-    // adjust the left margin of the active underline
-    // $('#implementation hr').css({
-    //   'margin-left' : percentages[index],
-    //   'position' : 'relative'
-    // });
 
     // add blue hightlight to the now active slide
     // $(pagesArray[index]).addClass('implementation-active');
