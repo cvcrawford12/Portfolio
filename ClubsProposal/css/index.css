@@ -401,15 +401,16 @@ strong {
   color: #fff;
   position: relative;
 	cursor: pointer;
+	font-size: 1.5em;
 }
 
 #implementation li::before{
   content: '';
   position: absolute;
-  top: .9em;
+  top: .7em;
   left: -4.4em;
-  width: 4.4em;
-  height: .2em;
+  width: 4.5em;
+  height: .4em;
   background: #38c0c9;
   z-index: -1;
 	transition: .3s ease-in-out;
@@ -610,14 +611,13 @@ strong {
 .csd-partner {
 	height: 100%;
 	width: 100%;
-	/*background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(40, 40, 40, 0.6)), url(../img/backgrounds/reus-bg-red.gif);*/
-	background: url(../img/backgrounds/bg-csd.jpg);
+	background: url(../img/backgrounds/CSD_9ineSports_1000x600.jpg);
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
-	background-position: top;
+	background-position: bottom;
 }
 
 /**********************/
@@ -1089,6 +1089,10 @@ label {
 	  height: .2em;
 	  background: #38c0c9;
 	  z-index: -1;
+	}
+
+	#what, .audience {
+		padding: 100px 0 !important;
 	}
 
 	.description {
