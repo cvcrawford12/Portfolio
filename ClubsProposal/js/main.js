@@ -154,7 +154,7 @@ function main() {
      if (isScrolledIntoView('#what')){
        $('.active-page').removeClass('active-page');
        $('.what-link').addClass('active-page');
-     } else if (isScrolledIntoView('#benefits') || isScrolledIntoView('.revenue')){
+     } else if (isScrolledIntoView('#benefits')){
        $('.active-page').removeClass('active-page');
        $('.benefits-link').addClass('active-page');
      } else if (isScrolledIntoView('#implementation')){
