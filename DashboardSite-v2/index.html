@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Data Dashboard</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap-grid-ms.min.css">
+
+  </head>
+  <body>
+    <section id="main-container">
+      <div class="container-fluid">
+        <div id="card-headings">
+          <div class="row col-centered-desktop">
+            <div class="col-md-3 col-xs-12 col-ms-6 col-centered spacing">
+              <div id="users" class="thumbnail card">
+                <div class="caption">
+                  <span class="card-icon"><i class="fa fa-users"></i></span>
+                  <div class="card-header">
+                    <span class="text-center small card-data-label">Total Users</span>
+                    <span class="card-data" id="users">104K+</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-footer-left text-left">
+                      <span class="card-footer-label">% New Users</span>
+                      <span class="card-footer-data">54.3%</span>
+                    </div>
+                    <div class="card-footer-right text-right">
+                      <span class="card-footer-label">Average Visit Time</span>
+                      <span class="card-footer-data">10.34</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12 col-ms-6 col-centered spacing">
+              <div id="visitors" class="thumbnail card">
+                <div class="caption">
+                  <span class="card-icon"><i class="fa fa-file-text-o"></i></span>
+                  <div class="card-header">
+                    <span class="text-center small card-data-label">Most Visited Page</span>
+                    <span class="card-data" id="page"><a class="page-link" href="#">Espanyol</a></span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-footer-left text-left">
+                      <span class="card-footer-label"># Of Clicks Per Visit</span>
+                      <span class="card-footer-data">4</span>
+                    </div>
+                    <div class="card-footer-right text-right">
+                      <span class="card-footer-label">Average Visit</span>
+                      <span class="card-footer-data">7.84</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12 col-ms-6 col-centered spacing">
+              <div id="posts" class="thumbnail card">
+                <div class="caption">
+                  <span class="card-icon"><i class="fa fa-envelope"></i></span>
+                  <div class="card-header">
+                    <span class="text-center small card-data-label">Total User Posts</span>
+                    <span class="card-data" id="users">947K+</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-footer-left text-left">
+                      <span class="card-footer-label">% Increase In Posts</span>
+                      <span class="card-footer-data">48.3%</span>
+                    </div>
+                    <div class="card-footer-right text-right">
+                      <span class="card-footer-label">Posts Per User</span>
+                      <span class="card-footer-data">9.23</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-12 col-ms-6 col-centered spacing">
+              <div id="downloads" class="thumbnail card">
+                <div class="caption">
+                  <span class="card-icon"><i class="fa fa-cloud-download"></i></span>
+                  <div class="card-header">
+                    <span class="text-center small card-data-label">Mobile Downloads</span>
+                    <span class="card-data" id="users">64K+</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-footer-left text-left">
+                      <span class="card-footer-label text-center"><i class="fa fa-apple"></i></span>
+                      <span class="card-footer-data">64.3%</span>
+                    </div>
+                    <div class="card-footer-right text-right">
+                      <span class="card-footer-label text-center"><i class="fa fa-android"></i></span>
+                      <span class="card-footer-data">35.7%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="chartsArea">
+          <div class="row col-centered-desktop">
+            <div id="activityArea">
+              <div class="col-md-6 spacing col-sm-12">
+                <div class="thumbnail equalize">
+                  <div class="graph-title">
+                    <h4>User Activity Per Session</h4>
+                  </div>
+                  <canvas id="activityChart"></canvas>
+                  <div class="btn-group dropup">
+                    <button id="activityFilterBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clicks</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul id="activityFilters" style="min-width:10px;" class="dropdown-menu">
+                      <li>
+                        <a>Clicks</a>
+                      </li>
+                      <li>
+                        <a>Page Visits</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 spacing col-sm-12">
+              <div class="thumbnail equalize">
+                <div class="graph-title">
+                  <h4>Fan Engagement Heat Map</h4>
+                </div>
+                <div id="map"></div>
+                <div class="container">
+                  <div>
+                    <div class="legend high-color"></div>
+                    <span>High Engagement</span>
+                  </div>
+                  <div>
+                    <div class="legend medium-color"></div>
+                    <span>Medium Engagement</span>
+                  </div>
+                  <div>
+                    <div class="legend low-color"></div>
+                    <span>Low Engagement</span>
+                  </div>
+                  <div>
+                    <div class="legend none-color"></div>
+                    <span>Little to No Engagement</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row col-centered-desktop">
+              <div id="barArea">
+                <div class="col-lg-6 col-md-5 spacing col-xs-12 col-sm-12 col-centered pull-up-bar-chart">
+                  <div class="thumbnail equal">
+                    <div class="graph-title">
+                      <h4>Team Social Media Activity</h4>
+                    </div>
+                    <div style="min-height: 300px; max-height:600px" class="canvas-container">
+                      <canvas id="barChart"></canvas>
+                    </div>
+                    <div class="container buttons">
+                      <div class="btn-group dropup">
+                        <button id="leagueBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Premier League</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="caret"></span>
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul id="league" class="dropdown-menu">
+                          <li><a>Premier League</a>
+                          </li>
+                          <li><a>Bundesliga</a>
+                          </li>
+                          <li><a>La Liga</a>
+                          </li>
+                          <li><a>Champions League</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn-group dropup">
+                        <button id="teamBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="caret"></span>
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul id="team" class="dropdown-menu">
+                          <li>
+                            <a><input data-value="Arsenal" type="checkbox"> Arsenal</a>
+                          </li>
+                          <li>
+                            <a><input data-value="Manchester United" type="checkbox"> Manchester United</a>
+                          </li>
+                          <li>
+                            <a><input data-value="Chelsea FC" type="checkbox"> Chelsea FC</a>
+                          </li>
+                          <li>
+                            <a><input data-value="Everton" type="checkbox"> Everton</a>
+                          </li>
+                          <li>
+                            <a><input data-value="Southhampton" type="checkbox"> Southhampton</a>
+                          </li>
+                          <li>
+                            <a><input data-value="Manchester City" type="checkbox"> Manchester City</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="btn-group dropup">
+                        <button id="networkBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Network</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="caret"></span>
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul id="network" style="min-width: 10px;" class="dropdown-menu">
+                          <li>
+                            <a><i id="Facebook" class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                          </li>
+                          <li>
+                            <a><i id="Pinterest" class="fa fa-pinterest" aria-hidden="true"></i></a>
+                          </li>
+                          <li>
+                            <a><i id="Twitter" class="fa fa-twitter" aria-hidden="true"></i></a>
+                          </li>
+
+                          <li>
+                            <a><i id="Youtube" class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                          </li>
+                          <li>
+                            <a><i id="Instagram" class="fa fa-instagram" aria-hidden="true"></i></a>
+                          </li>
+                          <li role="separator" class="divider"></li>
+                          <li><a>All</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <span id="leagueTeams-popover" class="btn-group" data-container="body" data-toggle="popover" data-placement="top">
+                        <a id="filter">Filter</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 spacing col-xs-12 col-sm-6 col-centered">
+                <div class="thumbnail">
+                  <div class="graph-title">
+                    <h4>Most Viewed Media Type</h4>
+                  </div>
+                  <canvas class="donut-size" id="mediaTypeChart"></canvas>
+                </div>
+              </div>
+              <div id="playerChart">
+                <div class="col-lg-3 col-md-4 spacing col-xs-12 col-ms-6 col-centered">
+                  <div class="thumbnail equal">
+                    <div class="graph-title">
+                      <h4>Player Engagement - <span id="playerFilter">Weekly</span></h4>
+                    </div>
+                    <div class="players-list">
+                      <div class="players">
+                        <div class="player player-header"></div>
+                        <div class="player player-header left">Player</div>
+                        <div class="player player-header">Posts</div>
+                        <div class="player player-header">Comments</div>
+                        <!-- <div class="player player-header">Network</div> -->
+                      </div>
+                      <ul id="slide">
+                      </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                      <button id="playerFilterBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weekly</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul style="min-width:10px;" id="playerFilters" class="dropdown-menu">
+                        <li>
+                          <a>Daily</a>
+                        </li>
+                        <li>
+                          <a>Weekly</a>
+                        </li>
+                        <li>
+                          <a>Monthly</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <button id="next-player" class="player-control btn btn-primary"><i class="fa fa-arrow-right"></i></button>
+                    <button id="prev-player" class="player-control btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row col-centered-desktop">
+            <div id="eventArea">
+              <div class="col-lg-6 col-md-6 spacing col-xs-12 col-centered col-sm-12 pull-up-pie-chart">
+                <div class="thumbnail">
+                  <div class="graph-title">
+                    <h4>Event Sales</h4>
+                  </div>
+                  <canvas id="eventsChart"></canvas>
+                  <div class="container buttons">
+                    <div class="btn-group dropup">
+                      <button id="eventsLeagueBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Premier League</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="leagues" class="dropdown-menu">
+                        <li><a>Premier League</a>
+                        </li>
+                        <li><a>Bundesliga</a>
+                        </li>
+                        <li><a>La Liga</a>
+                        </li>
+                        <li><a>Champions League</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                      <button id="eventsTeamBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="eventsTeams" class="dropdown-menu">
+                        <li>
+                          <a><input data-value="Arsenal" type="checkbox"> Arsenal</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Manchester United" type="checkbox"> Manchester United</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Chelsea FC" type="checkbox"> Chelsea FC</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Everton" type="checkbox"> Everton</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Southhampton" type="checkbox"> Southhampton</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Manchester City" type="checkbox"> Manchester City</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <span id="events-popover" class="btn-group" data-container="body" data-toggle="popover" data-placement="top">
+                      <a id="filterEvents">Filter</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="shopArea">
+              <div class="col-md-6 spacing col-xs-12">
+                <div class="thumbnail">
+                  <div class="graph-title">
+                    <h4>Team Shop Sales</h4>
+                  </div>
+                  <canvas id="store"></canvas>
+                  <div class="container buttons">
+                    <div class="btn-group dropup">
+                      <button id="leagueButton" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Premier League</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="leagues" class="dropdown-menu">
+                        <li><a>Premier League</a>
+                        </li>
+                        <li><a>Bundesliga</a>
+                        </li>
+                        <li><a>La Liga</a>
+                        </li>
+                        <li><a>Champions League</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                      <button id="teamButton" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="teams" class="dropdown-menu">
+                        <li>
+                          <a><input data-value="Arsenal" type="checkbox"> Arsenal</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Manchester United" type="checkbox"> Manchester United</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Chelsea FC" type="checkbox"> Chelsea FC</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Everton" type="checkbox"> Everton</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Southhampton" type="checkbox"> Southhampton</a>
+                        </li>
+                        <li>
+                          <a><input data-value="Manchester City" type="checkbox"> Manchester City</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <span id="teams-popover" class="btn-group" data-container="body" data-toggle="popover" data-placement="top">
+                      <a id="filterShop">Filter</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row col-centered-desktop">
+            <div id="shopBreakdownArea">
+              <div class="col-md-6 spacing col-xs-12 pull-up-horizontal-chart">
+                <div class="thumbnail">
+                  <div class="graph-title">
+                    <h4>Shop Sales Breakdown</h4>
+                  </div>
+                  <div class="container buttons">
+                    <div class="btn-group dropdown pull-right">
+                      <button id="shopTypeBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sales</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="shopTypes" class="dropdown-menu">
+                        <li><a>Sales</a></li>
+                        <li><a>Clicks</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <canvas id="shopBreakdown"></canvas>
+                  <div class="container buttons">
+                    <div class="btn-group dropup">
+                      <button id="shopLeaguesBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Premier League</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="shopLeagues" class="dropdown-menu">
+                        <li><a>Premier League</a>
+                        </li>
+                        <li><a>Bundesliga</a>
+                        </li>
+                        <li><a>La Liga</a>
+                        </li>
+                        <li><a>Champions League</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                      <button id="shopTeamsBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="shopTeams" class="dropdown-menu">
+                        <li>
+                          <a>Arsenal</a>
+                        </li>
+                        <li>
+                          <a>Manchester United</a>
+                        </li>
+                        <li>
+                          <a>Chelsea FC</a>
+                        </li>
+                        <li>
+                          <a>Everton</a>
+                        </li>
+                        <li>
+                          <a>Southhampton</a>
+                        </li>
+                        <li>
+                          <a>Manchester City</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                      <button id="shopPlayersBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Players</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="shopPlayers" class="dropdown-menu">
+                        <li><a>Victor Sanchez</a>
+                        </li>
+                        <li><a>Pablo Piati</a>
+                        </li>
+                        <li><a>David Lopez</a>
+                        </li>
+                        <li><a>Diego Lopez</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                      <button id="shopBrandsBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brand</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="shopBrands" class="dropdown-menu">
+                        <li><a>Nike</a>
+                        </li>
+                        <li><a>Adidas</a>
+                        </li>
+                        <li><a>Asics</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                      <button id="shopProductsBtn" type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul id="shopProducts" class="dropdown-menu">
+                        <li id="shirts" class="menu-item dropdown dropdown-submenu">
+                          <a id="shirtsDropdown" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">T-Shirts</a>
+                          <ul class="dropdown-menu" aria-labelledby="jerseyDropdown">
+                            <li class="menu-item">
+                              <a>All</a>
+                            </li>
+                            <li class="menu-item">
+                              <a>Retro Jersey</a>
+                            </li>
+                            <li class="menu-item">
+                              <a>Home Jersey</a>
+                            </li>
+                            <li class="menu-item">
+                              <a>Away Jersey</a>
+                            </li>
+                            <li class="menu-item">
+                              <a>Home Jersey</a>
+                            </li>
+                            <li class="menu-item">
+                              <a>Away Jersey</a>
+                            </li>
+                            <li class="menu-item">
+                              <a>Home Jersey</a>
+                            </li>
+                            <li class="menu-item">
+                              <a>Away Jersey</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <li class="menu-item dropdown dropdown-submenu">
+                            <a id="shortsDropdown" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shorts</a>
+                            <ul class="dropdown-menu" aria-labelledby="shortsDropdown">
+                              <li class="menu-item">
+                                <a>All</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Nike Training Shorts</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Nike Training Sweats</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Messi Numbered Shorts</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Home Jersey</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Away Jersey</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Home Jersey</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Away Jersey</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </li>
+                        <li>
+                          <li class="menu-item dropdown dropdown-submenu">
+                            <a id="shoesDropdown" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shoes</a>
+                            <ul class="dropdown-menu" aria-labelledby="shoesDropdown">
+                              <li class="menu-item">
+                                <a>All</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Nike Training Shoes</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Nike Futbol Cleats</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Asics Training Shoes</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Asics Running Shoes</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Away Jersey</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Home Jersey</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Away Jersey</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </li>
+                        <li>
+                          <li class="menu-item dropdown dropdown-submenu">
+                            <a id="souvenirDropdown" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Souvenir</a>
+                            <ul class="dropdown-menu" aria-labelledby="souvenirDropdown">
+                              <li class="menu-item">
+                                <a>All</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Nike Training Shoes</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Nike Futbol Cleats</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Asics Training Shoes</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Asics Running Shoes</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Away Jersey</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Home Jersey</a>
+                              </li>
+                              <li class="menu-item">
+                                <a>Away Jersey</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </li>
+                      </ul>
+                    </div>
+                    <span class="btn-group" id="shop-popover" data-container="body" data-toggle="popover" data-placement="top">
+                      <a id="filterShopBreakdown">Filter</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.0/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.8/datamaps.world.js"></script>
+    <script type="text/javascript" src="js/handleFiltering.js"></script>
+    <script type="text/javascript" src="js/leagues.js"></script>
+    <script type="text/javascript" src="js/players.js"></script>
+    <!-- <script type="text/javascript" src="js/top-players.js"></script> -->
+    <script type="text/javascript" src="js/clicks.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/mediaTypes.js"></script>
+    <!-- <script type="text/javascript" src="js/deviceType.js"></script> -->
+    <script type="text/javascript" src="js/store.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <script type="text/javascript" src="js/shopBreakdown.js"></script>
+
+
+    <script>
+      // Defaults for charts
+      Chart.defaults.global.defaultFontColor = '#fff';
+      Chart.defaults.global.defaultFontFamily = 'sans-serif';
+    </script>
+
+  </body>
+</html>
