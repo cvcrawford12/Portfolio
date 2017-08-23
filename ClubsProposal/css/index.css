@@ -1094,15 +1094,23 @@ label {
 	  display: inline-block;
 	  color: white;
 	  position: relative;
+		font-size: 1.2em;
+	}
+
+	.csd-partner {
+		background: url(../img/backgrounds/bg-csd-mobile.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 	}
 
 	#implementation li::before{
 	  content: '';
 	  position: absolute;
-	  top: .9em;
+	  top: .7em;
 	  left: -4em;
 	  width: 4em;
-	  height: .2em;
+	  height: .4em;
 	  background: #38c0c9;
 	  z-index: -1;
 	}

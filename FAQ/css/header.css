@@ -1,0 +1,118 @@
+body, html {
+	font-family: 'Roboto', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #333;
+	width: 100% !important;
+	height: 100% !important;
+  overflow: hidden;
+  background: #d6d6d6;
+}
+
+/**********************/
+/* Navigation */
+/**********************/
+.navbar-custom {
+	padding: 0;
+	border-bottom: 0;
+	letter-spacing: 1px;
+	background: #000000;
+	text-transform: uppercase;
+}
+
+.footer-p a, .questions li a {
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-p a:hover, .questions li a:hover {
+  color: #38c0c9;
+  text-decoration: none;
+}
+
+.navbar-custom .navbar-toggle {
+	color: #eee;
+	font-size: 18px;
+	border-radius: 2px;
+	padding: 0 4px;
+
+}
+
+.navbar-toggle {
+	background-color: none;
+}
+
+
+.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+	color: #ffffff;
+}
+.navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
+	outline: 0;
+}
+.navbar-custom a {
+	color: #fff;
+	margin: 10px 0;
+}
+.navbar-custom .nav li a {
+	-webkit-transition: background .3s ease-in-out;
+	-moz-transition: background .3s ease-in-out;
+	transition: background .3s ease-in-out;
+}
+.navbar-custom .nav li a:hover {
+	outline: 0;
+	color: #38c0c9;
+	background-color: transparent;
+}
+.navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
+	outline: 0;
+	color: #38c0c9;
+}
+.navbar-custom .nav li.active {
+	outline: 0;
+}
+.navbar-custom .nav li.active a {
+	background-color: rgba(255,255,255,.3);
+}
+.navbar-custom .nav li.active a:hover {
+	color: #fff;
+}
+
+.navbar-left {
+  margin: auto;
+	padding: 0;
+}
+.navbar-left>img {
+  height: auto;
+  width: 50%;
+	margin-left: 5%;
+}
+
+#brand-image {
+	width: 5%;
+	padding-bottom: 10px;
+}
+
+.footer {
+  height: 180px;
+  background-color: #000;
+  color: #fff !important;
+}
+
+.footer-title {
+  color: #38c0c9;
+  padding-top: 5px;
+  width: auto;
+}
+
+.footer-p {
+  font-size: 0.8em;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.search-group {
+  width: 20%;
+  padding-left: 10px;
+}

@@ -60,20 +60,13 @@ function main() {
 
 
   function handleSwiperArrowClick(arrow, pagesArray) {
-    arrow.addEventListener('click', function() {
+    $(arrow).on('click', function() {
       // grab index with swiper's method
       var index = implementationSwiper.activeIndex;
-
+    
       // change the swiper to that index and update css
       adjustActiveClass(pagesArray, index);
     });
-    // $(arrow).on('click', function() {
-    //   // grab index with swiper's method
-    //   var index = implementationSwiper.activeIndex;
-    //
-    //   // change the swiper to that index and update css
-    //   adjustActiveClass(pagesArray, index);
-    // });
   }
 
 
