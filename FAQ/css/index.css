@@ -1,5 +1,5 @@
 #faq-home {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   padding: 50px 0 0 0;
 }
@@ -45,4 +45,20 @@
 
 .caption h4 {
   color: #38c0c9;
+}
+
+@media (max-width: 648px) {
+  .caption h4 {
+    font-size: 1.1em;
+    margin: 2px auto;
+  }
+
+  .caption {
+    font-size: 0.8em;
+  }
+
+  .center-on-mobile {
+    margin: 0 auto;
+    float: none;
+  }
 }

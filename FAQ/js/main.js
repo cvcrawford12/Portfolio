@@ -1,15 +1,16 @@
 function main() {
-  $('.answer-row').hide();
-
+  // Only perform hover effect on thumbnails with this class
   $('.hover-effect').hover(
+    // Show caption with category details/description
     function(){
-        $(this).find('.caption').slideDown(250); //.fadeIn(250)
+        $(this).find('.caption').slideDown(250);
     },
     function(){
-        $(this).find('.caption').slideUp(250); //.fadeOut(205)
+        $(this).find('.caption').slideUp(250);
     }
   );
 
+  // When the search bar is clicked expand the width
   $('input').on('focus', function() {
     $(this).parent().css({
       'width' : '50%',
@@ -17,6 +18,7 @@ function main() {
     })
   });
 
+  // When focus on the search bar is lost then transition width back to normal
   $('input').on('blur', function() {
     $(this).parent().css({
       'width' : '20%',
@@ -24,19 +26,33 @@ function main() {
     })
   });
 
+  // Init swiper for sub-category page
   var questionsSwiper = new Swiper('.question-swiper-container', {
         speed: 500
   });
 
-
+  // When a question is clicked, get the title and answer
   $('.question-link').on('click', function() {
     var questionHeader = $(this).text();
+
+    // Change the header of the second swiper slide to whatever question was clicked
     $('.question-header').text(questionHeader);
+
+    /*
+    Hide the footer to bring focus on answer, prevent scrolling since setting
+    up sticky footy required some css which makes the min-height of html 100%
+    */
+    $('.footer').hide();
+    $('html').css('overflow', 'hidden');
+
+    // Since a link was clicked slide to the answer section
     questionsSwiper.slideNext();
-    changeToAndFromQuestion('.card-row', '.answer-row', questionHeader)
   });
 
+  // When back button is clicked we undo changes above
   $('.go-to-sub-cat').on('click', function() {
+    $('.footer').show();
+    $('html').css('overflow', 'visible');
     questionsSwiper.slidePrev();
   });
 
