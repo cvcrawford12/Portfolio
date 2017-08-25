@@ -28,7 +28,8 @@ function main() {
 
   // Init swiper for sub-category page
   var questionsSwiper = new Swiper('.question-swiper-container', {
-        speed: 500
+        speed: 500,
+        noSwipingClass: 'swiper-no-swiping'
   });
 
   // When a question is clicked, get the title and answer
@@ -39,10 +40,9 @@ function main() {
     $('.question-header').text(questionHeader);
 
     /*
-    Hide the footer to bring focus on answer, prevent scrolling since setting
-    up sticky footy required some css which makes the min-height of html 100%
+    Prevent scrolling since setting up sticky footy required
+    some css which makes the min-height of html 100%
     */
-    $('.footer').hide();
     $('html').css('overflow', 'hidden');
 
     // Since a link was clicked slide to the answer section
@@ -51,7 +51,6 @@ function main() {
 
   // When back button is clicked we undo changes above
   $('.go-to-sub-cat').on('click', function() {
-    $('.footer').show();
     $('html').css('overflow', 'visible');
     questionsSwiper.slidePrev();
   });

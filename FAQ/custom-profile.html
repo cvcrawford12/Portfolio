@@ -41,10 +41,10 @@
       <div class="container-fluid">
         <div class="row card-row">
 
-          <div class="swiper-container question-swiper-container">
+          <div class="swiper-container question-swiper-container swiper-no-swiping">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a style="color: #38c0c9; font-size:1.2em; padding-left: 5%;" href="javascript:history.back()">Back To All Categories</a>
+                <a class="go-to-main-cat" href="javascript:history.back()">Back To All Categories</a>
                 <div class="row-header text-center">
                   <div class="faq-title display-inline"><h4>Can't find what you are looking for? Try searching all questions.</h4></div>
                   <div class="display-inline form-group search-group">
@@ -53,8 +53,10 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-10 center-on-mobile reduce-padding">
                   <div class="thumbnail card text-left">
-                    <div class="question-container">
+                    <div class="card-header">
                       <h4>Customizing Clubs</h4>
+                    </div>
+                    <div class="question-container">
                       <ul class="questions text-left">
                         <li><a class="question-link">How do I add a new team to my profile?</a></li>
                         <li><a class="question-link">How do I view which teams I'm following?</a></li>
@@ -67,8 +69,10 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-10 center-on-mobile reduce-padding">
                   <div class="thumbnail card text-left">
-                    <div class="question-container">
+                    <div class="card-header">
                       <h4>Customizing Idols</h4>
+                    </div>
+                    <div class="question-container">
                       <ul class="questions text-left">
                         <li><a class="question-link">How do I follow a new idol on my profile?</a></li>
                         <li><a class="question-link">How do I view which players I'm following?</a></li>
@@ -82,8 +86,10 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-10 center-on-mobile reduce-padding">
                   <div class="thumbnail card text-left">
-                    <div class="question-container">
+                    <div class="card-header">
                       <h4>Customizing Brands</h4>
+                    </div>
+                    <div class="question-container">
                       <ul class="questions text-left">
                         <li><a class="question-link">How do I add a new brand to my profile?</a></li>
                         <li><a class="question-link">How do I view which brands I'm following?</a></li>
@@ -95,9 +101,9 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide swiper-no-swiping">
                 <a class="pull-left go-to-sub-cat">Back</a>
-                <div class="col-md-8 col-md-offset-2 answer-slide">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 answer-slide">
                   <h2 class="question-header"></h2>
                   <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
@@ -110,9 +116,9 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="col-md-3 col-sm-3 hidden-xs">
+        <div style="margin-top: 4px;" class="col-md-3 col-sm-3 hidden-xs">
           <img class="footer-img img-responsive" src="http://9inesports.com/static/img/logo-app@2x.png">
-          <p class="footer-p" style="margin-bottom: 4%;"><em>Nothing but the best</em></p>
+          <p class="footer-p text-center" style="margin-bottom: 12%;"><em>Nothing but the best</em></p>
           <p>© 2017 9ineSports Network</p>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-4 text-center">
