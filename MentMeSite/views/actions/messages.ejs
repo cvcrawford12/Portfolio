@@ -1,0 +1,225 @@
+<% include ../partials/header %>
+    <section id="messages">
+        <div class="outer-container container-fluid">
+            <div class="row inner-container dynamic-cols">
+                <a class="expand"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                <div class="col-md-3 col-sm-3 message-col">
+                    <div class="message-contact-container">
+                        <ul class="message-contact-list search-container">
+                            <li>
+                                <div class="search-group">
+                                    <span style="padding-right: 8px;"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control search-bar" placeholder="Search Conversations">
+                                </div>
+                            </li>
+                            <hr>
+                        </ul>
+                        <ul class="message-contact-list message-groups">
+                            <li class="message-section">
+                                <h3 class="message-section-title"><a href="#">Groups</a></h3><span class="pull-right new-message"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                            </li>
+                            <li><a href="#"><span class="message-icon-wrapper"><i class="fa fa-users" aria-hidden="true"></i></span> Development Group</a></li>
+                            <li><a href="#"><span class="message-icon-wrapper"><i class="fa fa-users" aria-hidden="true"></i></span> Cup of Java</a></li>
+                        </ul>
+                        <ul class="message-contact-list message-direct">
+                            <li class="message-section">
+                                <h3 class="message-section-title"><a href="#">Direct Messages</a></h3><span class="pull-right new-message"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                            </li>
+                            <li><a href="#"><span class="message-icon-wrapper"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>Albert Gracious</a><span class="pull-right delete-conversation"><i class="fa fa-times-circle" aria-hidden="true"></i></span></li>
+                            <li><a href="#"><span class="message-icon-wrapper"><i class="fa fa-user-circle-o online" aria-hidden="true"></i></span>Sydney Sima</a><span class="pull-right delete-conversation"><i class="fa fa-times-circle" aria-hidden="true"></i></span></li>
+                            <li class="active"><a href="#"><span class="message-icon-wrapper"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>Lisa Crawford</a><span class="pull-right delete-conversation"><i class="fa fa-times-circle" aria-hidden="true"></i></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="expand-messages-col" class="col-md-6 col-sm-6 message-col dynamic-col span6 shift-right">
+                    <div class="message-outer-container">
+                        <div class="message-container">
+                            <div class="bubble">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>Hey how's it going?</p>
+                            </div>
+                            <div class="bubble bubble-alt white">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
+                            </div>
+                            <div class="bubble">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>Hey how's it going?</p>
+                            </div>
+                            <div class="bubble bubble-alt white">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
+                            </div>
+                            <div class="bubble">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>Hey how's it going?</p>
+                            </div>
+                            <div class="bubble bubble-alt white">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
+                            </div>
+                            <div class="bubble">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>Hey how's it going?</p>
+                            </div>
+                            <div class="bubble bubble-alt white">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
+                            </div>
+                            <div class="bubble">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>Hey how's it going?</p>
+                            </div>
+                            <div class="bubble bubble-alt white">
+                                <p class="datestamp">May 20, 2014, 4:16 PM</p>
+                                <p>So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-message-area input-group">
+                        <textarea class="form-control text-area" rows=1></textarea>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 downloads-outer-container dynamic-col span3">
+                    <div class="downloads-inner-container">
+                        <div class="downloads-navbar">
+                            <ul class="download-options">
+                                <li class="download-option">
+                                    <a class="message-download active" data-target="downloaded"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="download-option">
+                                    <a class="message-files" data-target="all-files"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="download-option">
+                                    <a class="close-download-options"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="downloads-sub-navbar">
+                             <div class="downloads-sub-container">
+                                  <ul class="download-sub-options">
+                                    <li class="download-sub-option" data-index-number=0><a href="#">All</a></li>
+                                    <li class="download-sub-option" data-index-number=1><a href="#">Conversation</a></li>
+                                    <hr>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="download-items downloaded active">
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="https://cdn4.iconfinder.com/data/icons/CS5/512/ACP_PDF%202_file_document.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="../../images/word-icon.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="https://cdn4.iconfinder.com/data/icons/CS5/512/ACP_PDF%202_file_document.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="../../images/word-icon.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="https://cdn4.iconfinder.com/data/icons/CS5/512/ACP_PDF%202_file_document.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="../../images/word-icon.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="download-items all-files">
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="https://thumb1.shutterstock.com/display_pic_with_logo/3679397/381480943/stock-photo-motivational-quote-on-glitter-abstract-background-381480943.jpg">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="../../images/word-icon.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="https://cdn4.iconfinder.com/data/icons/CS5/512/ACP_PDF%202_file_document.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="../../images/word-icon.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="https://cdn4.iconfinder.com/data/icons/CS5/512/ACP_PDF%202_file_document.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class='download-item-container inline-div'>
+                                <img class="img-responsive download-img inline-div" src="../../images/word-icon.png">
+                                <div class="download-item-description inline-div">
+                                    <p class="download-date">Download Date</p>
+                                    <p class="download-name">Download Name</p>
+                                    <p class="download-size">File Size</p>
+                                    <span class="share-icon"><i class="fa fa-share" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<% include ../partials/footer %>

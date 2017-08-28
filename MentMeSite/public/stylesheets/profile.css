@@ -1,0 +1,117 @@
+#profile {
+    height: 100%;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.profile-container {
+    background: #222;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.profile-options-container {
+    padding-top: 5%;
+}
+
+.profile-options {
+    color: #fff;
+    font-size: 1.2em;
+    list-style: none;
+    padding: 5% 0;
+}
+
+.profile-options li a:hover, .profile-options li a:active, .profile-options li a:focus, .active-profile {
+    color: #5FD37A;
+    text-decoration: none;
+}
+
+.profile-photo {
+    border: 1px solid #E0E0E0;
+}
+
+.col-centered {
+    margin: 0 auto;
+    float: none;
+}
+
+/* Basic Profile Area Styling */
+.profile-header {
+    border-bottom: 1px solid #E0E0E0;
+    color: #fff;
+    text-align: center;
+    border-left: 1px solid #E0E0E0;
+}
+
+.profile-header p {
+    color: #E0E0E0;
+}
+
+.profile-form-container {
+    border-left: 1px solid #E0E0E0;
+}
+
+label, .photo-requirements {
+    color: #E0E0E0;
+    font-weight: lighter;
+}
+
+.basic-profile-form {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.basic-profile-form .btn-default {
+    padding: 8px;
+    font-size: 1em;
+    width: 20%;
+}
+
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+
+.photo-outer-container {
+    margin: 5% auto;
+    height: 300px;
+    width: 400px;
+    /*border: 1px solid #5FD37A;*/
+}
+
+.photo-inner-container {
+    position: relative;
+    width: 85%;
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 1px dotted #5FD37A;
+    background: #CCCCCC;
+    margin-bottom: 5%;
+}
+
+.photo-container {
+    /* Center Photo Container half the size*/
+    width: 50%;
+    height: 50%;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    background: url(https://ctcenterforthebook.org/wp-content/themes/flymag/images/placeholder.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 3px dotted #E0E0E0;
+}
+
+.photo-label {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.btn-primary {
+    background: #5FD37A;
+    outline-color: #5FD37A;
+    border-color: #5FD37A;
+}

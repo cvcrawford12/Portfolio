@@ -1,0 +1,15 @@
+{
+  "name": "mentme",
+  "version": "1.0.1",
+  "description": "First version of MentMe site pre database",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Connor Crawford",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}

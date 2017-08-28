@@ -1,0 +1,468 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  background: #F4F4F6;
+}
+
+#messages {
+    height: 100%;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.message-col, .outer-container, .inner-container, .message-contact-container, .downloads-outer-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+a:hover, .message-contact-list li:hover a {
+    color: #5FD37A;
+    text-decoration: none;
+}
+
+hr {
+    color: #5FD37A;
+    width: 100%;
+}
+
+.outer-container, .inner-container {
+    padding-left: 0 !important;
+}
+
+
+.message-contact-container {
+    height: 100%;
+    width: 100%;
+    background: #222;
+    padding: 5% 0;
+}
+
+.search-container {
+    padding-top: 5px;
+}
+
+.message-contact-list, .downloads-navbar {
+    padding-left: 0;
+}
+
+.message-contact-list li {
+    padding-left: 8%;
+    cursor: pointer;
+}
+
+.search-group {
+    padding-bottom: 5%;
+    display: inline;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.search-group > * {
+    display: inline;
+    width:auto;
+    vertical-align: middle;
+}
+
+.search-group .search-bar {
+    background: #fff;
+    border: 1px solid #5FD37A;
+    width: 80%;
+}
+
+.message-section-title {
+    color: #5FD37A;
+    display: inline;
+}
+
+.new-message i, .delete-conversation {
+    font-size: 1.2em;
+    padding-right: 4px;
+    opacity: 0.7;
+}
+
+.new-message i:hover, .delete-conversation i:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: #5FD37A;
+}
+
+.message-icon-wrapper {
+    padding-right: 4%;
+}
+
+.message-contact-list .online {
+    color: #5FD37A;
+}
+
+.message-contact-list a i {
+    color: #fff;
+}
+
+.message-contact-list .active,
+.message-contact-list .active a,
+.message-contact-list .active:hover a, 
+.message-contact-list .active:focus a, 
+.message-contact-list .active:active a {
+    color: #5FD37A;
+    text-decoration: none;
+}
+.message-outer-container {
+    /*max-height: 85%;*/
+    /*min-height: 75%;*/
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.text-message-area {
+    position: relative;
+    width: 95%;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-top: 2%;*/
+    height: 15%;
+    max-height: 15%;
+    vertical-align: bottom;
+}
+
+.text-area {
+    width: 100%;
+    height: 25%;
+    position: absolute !important;
+    max-height: 100%;
+    margin-bottom: 5%;
+    bottom: 0px !important;
+    border-radius: 6px !important;
+    resize: none;
+}
+
+.message-container {
+    max-height: 100%;
+    margin: 5% auto;
+    width: 95%;
+}
+
+
+
+/* Message Bubble Markup */
+.datestamp {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.8em !important;
+  margin-bottom: 8px;
+  color: #8b91a0;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+}
+ 
+ 
+/** ios1-ios6 bubbles **/
+.bubble {
+    box-sizing: border-box;
+    font-size: 0.9em;
+    float: left;
+    width: auto;
+    max-width: 50%;
+    position: relative;
+    clear: both;
+    background: #5FD37A;
+    border: solid 1px rgba(0,0,0,0.0);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    
+    -webkit-box-shadow: inset 0 8px 5px rgba(255,255,255,0.65), 0 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 8px 5px rgba(255,255,255,0.65), 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: inset 0 8px 5px rgba(255,255,255,0.65), 0 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    color: #000;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+    word-wrap: break-word;
+}
+
+.message-col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bubble:before, .bubble:after {
+  border-radius: 20px / 5px;
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+
+.bubble:after {
+  border: 8px solid transparent;
+  border-bottom-color: #5FD37A; /* arrow color */
+  bottom: 1px;
+  left: -5px;
+}
+
+.bubble-alt {
+  float: right;
+}
+.bubble-alt:before {
+  left: auto;
+  right: -7px;
+}
+.bubble-alt:after {
+  left: auto;
+  right: -5px;
+}
+ 
+.bubble p {
+  font-size: 1.4em;
+}
+
+.white {
+    background: #fff;
+}
+
+.white:after {
+    border-bottom: 8px solid #fff;
+    
+}
+
+/* Downloads (3rd col) section */
+.downloads-outer-container {
+    padding-right: 0;
+    -webkit-transition: width 0.3s ease, margin 0.3s ease;
+    -moz-transition: width 0.3s ease, margin 0.3s ease;
+    -o-transition: width 0.3s ease, margin 0.3s ease;
+    transition: width 0.3s ease, margin 0.3s ease;
+}
+
+#expand-messages-col {
+    -webkit-transition: width 0.3s ease, margin 0.3s ease;
+    -moz-transition: width 0.3s ease, margin 0.3s ease;
+    -o-transition: width 0.3s ease, margin 0.3s ease;
+    transition: width 0.3s ease, margin 0.3s ease;
+}
+
+.expand {
+    position:fixed; 
+    top:50px; 
+    right:20px; 
+    z-index:2; 
+    color: #5FD37A; 
+    font-size: 2em; 
+    display:none;
+    cursor: pointer;
+}
+
+.show-expand {
+    display: block;
+}
+
+.downloads-inner-container {
+    height: 100%;
+    width: 100%;
+    background: #A3A3A3;
+    overflow: scroll;
+}
+
+
+.downloads-navbar, .downloads-sub-navbar {
+    width: 100%;
+    height: 60px;
+}
+
+.downloads-navbar {
+    background: #222 !important;
+}
+
+.download-options .active i {
+    color: #5FD37A;
+}
+
+.downloads-sub-navbar {
+    background: #525252 !important;
+}
+
+.download-options {
+    list-style: none;
+    vertical-align: middle;
+    padding-top: 20px;
+    display: flex;
+}
+
+.download-sub-options {
+    padding-top: 10px;
+}
+
+.download-sub-option {
+    width: 25%;
+    display: inline;
+    text-align: center;
+}
+
+.download-sub-option a {
+    color: #fff !important;
+}
+
+.downloads-sub-container hr {
+  height: .25rem;
+  width: 25%;
+  margin: 0;
+  background: #5FD37A;
+  border: none;
+  transition: .3s ease-in-out;
+}
+
+.downloads-sub-container {
+    width: 95%;
+    /*margin: 0 auto;*/
+}
+
+.downloads-sub-container a {
+  display: inline-block;
+  width: 25%;
+  padding: .75rem 0;
+  margin: 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.download-option {
+    justify-content: space-between;
+    padding-top: .4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    vertical-align: middle;
+    width: 33.3%;
+    font-size: 1.2em;
+}
+
+.download-option .fa {
+    color: #fff;
+    cursor: pointer;
+}
+
+.download-option a .fa:hover,
+.download-option a .fa:focus,
+.download-option a .fa:active{
+    color: #5FD37A;
+}
+
+
+/* Deleting Conversations style */
+.delete-conversation .fa {
+    color: #fff;
+}
+
+.delete-conversation {
+    display: none;
+}
+
+.span0 {
+    width: 0%;
+}
+
+.span8 {
+    width: 75%;
+}
+
+.span6 {
+    width: 50%;
+}
+
+/* Download items */
+.download-img {
+    max-width: 20%;
+    height: auto;
+    padding-right: 4px;
+}
+
+.inline-div {
+    display: inline-block;
+}
+
+.download-items {
+    margin:0;
+    padding: 0;
+    padding-top: 5%;
+    text-align: center;
+    position: relative;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    opacity: 0; 
+    height: 0;
+    overflow: hidden;
+}
+
+.download-item-container {
+    width: 95%;
+    text-align: left;
+    position: relative;
+    padding: 5px;
+}
+
+.download-item-container:hover {
+    border: 1px solid #525252;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.download-item-container:last-of-type {
+    margin-bottom: 5%;
+}
+
+
+.download-item-description p {
+    margin: 0;
+}
+
+.download-item-description {
+    vertical-align: middle;
+}
+
+.share-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: auto;
+    border: 1px solid #525252;
+    opacity: 0.9;
+    border-radius: 6px;
+    display: none;
+    text-align:center;
+}
+
+.share-icon i {
+    color: #525252;
+}
+
+.share-icon:hover i {
+    color: #333;
+    border-color: #333;
+}
+
+.download-date, .download-size {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.download-name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* CSS Styling for other download options */
+.download-items.deactivate {
+}
+
+.download-items.active {
+    opacity: 1;
+    height: auto;
+    width: 100%;
+}
