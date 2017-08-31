@@ -1,0 +1,161 @@
+body, html {
+	font-family: 'Roboto', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #fff;
+	width: 100% !important;
+	height: 100% !important;
+	overflow: hidden;
+	background: linear-gradient(to bottom, rgba(56,201,192,0.2), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)) no-repeat;
+	/*background: rgba(40, 40, 40, 0.8);*/
+  background-position: center;
+  background-size: cover;
+}
+
+.container-fluid {
+  padding-top: 60px;
+}
+
+
+.flags {
+	font-size: 1.5em;
+	cursor: pointer;
+	margin-right: 8px !important;
+}
+
+.languages {
+	margin-right: 8px;
+  font-size: 1.2em;
+}
+
+.flag-container {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	list-style: none;
+	display: inline-flex;
+}
+
+
+.title h1 {
+	font-family: 'Lato', sans-serif;
+	text-transform: full-width;
+	width: 50%;
+	margin: 0 auto;
+  font-size: 3em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.iphone-mockup, .logos {
+  margin: 5% auto;
+}
+
+.no-padding {
+  padding: 2px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.icon-container {
+  position: relative;
+  width: 75px;
+  height: 75px;
+	background: transparent;
+  border-radius: 6px;
+	/*border: 1px solid rgba(255, 255, 255, 0.8);*/
+	border: 1px solid #38c0c9;
+  text-align: center;
+}
+
+.icon-container i {
+  position: relative;
+  top: 30%;
+  font-size: 2em;
+  vertical-align: middle;
+  color: #38c0c9;
+}
+
+.reduce-margin {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.description-col {
+  margin-top: 5%;
+}
+
+.inline-container {
+  margin-left: 10%;
+}
+
+.content {
+  height: auto;
+  opacity: 0.8;
+  font-size: 1.1em;
+}
+
+.content-header {
+  font-weight: bold;
+}
+
+.spacing {
+  margin: 4% auto;
+}
+
+.ninecolor {
+	color: #38c0c9;
+}
+
+.emphasis {
+	color: #38c0c9;
+	font-weight: bold;
+}
+
+.first {
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+	-o-animation-delay: 0.4s;
+}
+
+.second {
+	animation-delay: 0.8s;
+	-webkit-animation-delay: 0.8s;
+	-moz-animation-delay: 0.8s;
+	-o-animation-delay: 0.8s;
+}
+
+.third {
+	animation-delay: 1.2s;
+	-webkit-animation-delay: 1.2s;
+	-moz-animation-delay: 1.2s;
+	-o-animation-delay: 1.2s;
+}
+
+.fourth {
+	animation-delay: 1.6s;
+	-webkit-animation-delay: 1.6s;
+	-moz-animation-delay: 1.6s;
+	-o-animation-delay: 1.6s;
+}
+
+.fifth {
+	animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-o-animation-delay: 2s;
+}
+
+.sixth {
+	animation-delay: 2.4s;
+	-webkit-animation-delay: 2.4s;
+	-moz-animation-delay: 2.4s;
+	-o-animation-delay: 2.4s;
+}

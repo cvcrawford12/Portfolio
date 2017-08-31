@@ -1,0 +1,256 @@
+body, html {
+	font-family: 'Roboto', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #333;
+	width: 100% !important;
+	height: 100% !important;
+  overflow: hidden;
+  background: linear-gradient(90deg, #dadeec, #dadeec, #111, #111 75%, #111, #111);
+}
+
+#register {
+  height: 100%;
+  width: 100%;
+  padding: 60px 0;
+}
+
+
+/* Video Styling */
+#video-container {
+  width: 611px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  margin-top: 15%;
+  margin-right: 15%;
+}
+#video-container::after {
+  content: '';
+  display: block;
+  background: url(../img/transparent-iphone.png) no-repeat top left transparent;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 1000;
+	pointer-events:none;
+}
+#video-container video {
+	position: absolute;
+	/*top: 170px;
+	left: -82px;*/
+  top: 15px;
+	left: 72px;
+	z-index: 998;
+}
+
+#video-container div {
+	cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/play.png) no-repeat;
+  background-position: 50%;
+	z-index: 1001;
+	pointer-events: none;
+}
+
+.video-span, .video-span:hover, .video-span:focus, .video-span:active {
+	color: #38c0c9;
+	cursor: pointer;
+}
+
+
+/* Content */
+.register-section {
+  padding: 60px 0;
+}
+
+.center {
+	margin: 0 auto;
+	float: none;
+}
+
+.register-container {
+	margin-top: 10%;
+}
+
+.register-logo {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+
+.mobile-row {
+	display: none;
+}
+
+.row-desktop {
+	display: block !important;
+}
+
+.video-caption {
+	margin-top: 5%;
+  padding-left: 15%;
+}
+
+
+.form-container {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.register-header {
+  margin-bottom: 40px;
+}
+
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: #38c0c9;
+	opacity: 0.9;
+}
+
+.btn-primary:hover {
+	/*box-shadow: inset 0 0 5px #333;*/
+	opacity: 1;
+}
+
+
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;
+		margin-top:10px;
+ 	}
+
+	.mobile {
+		display: none;
+	}
+}
+
+.thumbnail{
+  width: 100%;
+  margin: 0 auto;
+  float: none;
+  padding: 0;
+  /*background: rgba(51,51,51,0.9) !important;*/
+  background: transparent;
+  /*background: #333;*/
+  border: none;
+}
+
+@media (max-width: 768px) {
+	.col-centered {
+		margin:0 auto;
+		float: none;
+	}
+
+	body, html {
+		overflow: visible !important;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	video {
+		object-fit: inherit;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+}
+
+
+.icon-container {
+  margin:50px auto;
+  width:100%;
+  text-align:center;
+}
+.icon {
+	position:relative;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding:20px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	color:#FFFFFF;
+	display: inline-block;
+}
+.icon i {
+	font-size:20px;
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+.icon.social {
+	margin:0 5px 0 0;
+	cursor:pointer;
+	background:#333 ;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.icon.social:hover  {
+	background:#38c0c9 ;
+	transition: 0.3s;
+	color: #fff !important;
+	-moz-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	-webkit-filter:	drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-moz-filter: 	drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-ms-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-o-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	filter: 			drop-shadow(0 1px 10px rgba(0,0,0,.8));
+}
+
+.icon.social:hover  i.fa  {
+	color: #fff !important;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+
+.icon.social.fb i {
+	left:13px;
+	top:10px;
+}
+
+.icon.social.gp i {
+	left: 8px;
+}
+
+.icon.social.wa i {
+	left: 11px;
+}
+
+
+.flags {
+	font-size: 1.5em;
+	cursor: pointer;
+	margin-right: 8px !important;
+}
+
+.languages {
+	margin-right: 8px;
+	color: #38c0c9;
+}
+
+.flag-container {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	list-style: none;
+	display: inline-flex;
+}
