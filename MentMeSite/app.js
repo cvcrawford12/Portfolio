@@ -22,6 +22,10 @@ app.get('/actions/:filter', function(req, res) {
    res.render('actions/' + filterParam);
 });
 
+app.get('/actions/todo', function(req, res) {
+   res.render('actions/todo');
+});
+
 
 app.listen(process.env.PORT, process.env.IP, function() {
    console.log('MentMe site is running'); 

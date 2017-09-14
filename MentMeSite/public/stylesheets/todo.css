@@ -1,0 +1,56 @@
+#todo {
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.outer-container, .inner-container {
+    height: 100%;
+}
+
+.todo-list-container {
+    height: 100%;
+    background: #222;
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.todo-filters-container {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+.todo-filters {
+    padding: 15px 15%;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.todo-filters {
+    margin-bottom: 0;
+}
+
+hr {
+    margin-top: 0;
+    opacity: 0.1;
+}
+
+/* Adding a new group or task styles*/
+.add-todos-list {
+    list-style: none;
+    width: 100%;
+}
+
+.add-todos-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

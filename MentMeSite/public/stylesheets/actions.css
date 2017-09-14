@@ -382,6 +382,7 @@ hr {
 
 .inline-div {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .download-items {

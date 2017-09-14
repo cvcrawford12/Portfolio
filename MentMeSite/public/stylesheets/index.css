@@ -5,21 +5,9 @@ body, html {
   font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-  /*background: #f4f4f4;*/
   background: #F4F4F6;
 }
 
-.message-outer-container::-webkit-scrollbar, 
-.activity-container::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
-}
-.message-outer-container::-webkit-scrollbar-thumb, 
-.activity-container::-webkit-scrollbar-thumb{
-    border-radius: 4px;
-    background-color: rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-}
 
 #dashboard {
   padding: 70px 0;
@@ -29,31 +17,25 @@ a {
   color: #fff;
 }
 
-.navbar .navbar-nav .dropdown:hover > .dropdown-menu {
-  max-height: 300px;
-  opacity: 1;
-}
-
-.navbar .navbar-nav .dropdown .dropdown-menu {
+.navbar .navbar-nav .dropdown .dropdown-menu li {
    -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-
-    max-height: 0;
-    display: block;
-    overflow: hidden;
-    opacity: 0;
 }
+
 
 #dashboard a, #dashboard a:hover {
   color: #5FD37A;
   cursor: pointer;
 }
+
+
 .rounded {
-  border-radius: 4px;
+  border-radius: 6px;
 }
+
 
 .container-fluid {
   padding-left: 5% !important;
@@ -162,11 +144,36 @@ a {
 .social-stream-wrapper {
   height: 100%;
   width: 100%;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.post-author, .post-date {
+  margin: 0;
 }
 
 .social-content {
   padding: 0;
 }
+
+.social-content .thumbnail .caption {
+  color: #fff !important;
+}
+
+.media-content {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+.posts hr {
+  width: 85%;
+  margin: 0 auto;
+  color: rgba(224,224,224,0.6);
+  opacity: 0.6;
+}
+
 
 .friends-container {
   padding-right: 0 !important;
@@ -175,7 +182,7 @@ a {
 }
 
 .activity-container {
-  height: 75vh;
+  height: 80vh;
   overflow: scroll;
 }
 
@@ -186,12 +193,19 @@ a {
 }
 
 .posts {
-  width: 75%;
+  width: 100%;
   height: auto;
   margin: 0 auto 4% auto;
-  border: 1px solid #5FD37A;
-  border-radius: 0;
+  background: #222;
+  border: 1px solid rgba(224,224,224,0.6);
 }
+
+.inner-post {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
 
 .social-header, .friend-request, .friend-request-name {
   color: #fff;
@@ -203,13 +217,17 @@ a {
 }
 
 .social-header h5 {
-  border-bottom: 1px solid #5FD37A;
   margin-right: 4px;
 }
 
 .show-more {
   text-align: right;
   color: #5FD37A;
+}
+
+.user-photo {
+  max-width: 50px;
+  height: auto;
 }
 
 .social-header > * {
@@ -228,6 +246,46 @@ a {
 
 .post-title {
   color: #5FD37A;
+}
+
+.post-header {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.post-socials {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+}
+
+.post-social, .social-engage i {
+  font-size: 1.2em;
+}
+
+.social-engage {
+  padding-right: 10px;
+  color: #fff;
+}
+
+.social-engage-container {
+  margin: 2% auto;
+}
+
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+.fa-instagram {
+  color: #fbad50;
+}
+
+.fa-twitter {
+  color: #42abf4;
 }
 
 .post-title:hover {
@@ -262,7 +320,7 @@ a {
 }
 
 .posts .book-container {
-  background: #f4f4f4;
+  background: #F4F4F6;
 }
 
 /* Helper Classes/General Styling */
@@ -285,11 +343,11 @@ a {
 }
 
 /* FontAwesome Styling */
-.fa-circle {
-  color: #d6d6d6;
-  font-size: 0.5em !important;
-  vertical-align: middle;
-}
+/*.fa-circle {*/
+/*  color: #d6d6d6;*/
+/*  font-size: 0.5em !important;*/
+/*  vertical-align: middle;*/
+/*}*/
 
 .fa-search,
 .fa-plus,

@@ -71,10 +71,17 @@ function main() {
   showMoreCaption();
   
   // Prevent NavBar dropdowns on click, only hover
-  $('.navbar .navbar-nav .dropdown').on('click', function(event) {
-    event.stopPropagation();
-  });
+  // $('.navbar .navbar-nav .dropdown').on('click', function(event) {
+  //   event.stopPropagation();
+  // });
   
+  
+  $(function() {
+    $(".dropdown").hover(
+        function(){ $(this).addClass('open') },
+        function(){ $(this).removeClass('open') }
+    );
+  });
 }
 
 main();
