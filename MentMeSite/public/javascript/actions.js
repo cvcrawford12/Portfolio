@@ -80,6 +80,19 @@ function main() {
     }
     
     
+    // Todo page functions 
+    function replaceTodo() {
+        $('.todo input').on('click', function() {
+           $(this).focus(); 
+        });
+        
+        $('.todo input').on('keypress', function(e) {
+            var key = e.which;
+            if (key == 13) {
+                $(this).blur();
+            }
+        });
+    }
     
     // initialize functions that will handle switching between messages for contacts
     closeDownloadsTab();
@@ -89,6 +102,7 @@ function main() {
     deleteConversation();
     showDownloadOptionsOnHover();
     handleDownloadOptions();
+    replaceTodo();
     
     
     ////// Jquery Events //////

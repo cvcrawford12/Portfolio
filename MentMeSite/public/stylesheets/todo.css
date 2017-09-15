@@ -5,6 +5,10 @@
     color: #fff;
 }
 
+ul, ol {
+    list-style: none;
+}
+
 .outer-container, .inner-container {
     height: 100%;
 }
@@ -53,4 +57,30 @@ hr {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.add-todo-icon {
+    padding-right: 5px;
+}
+
+.add-todo-icon i {
+    opacity: 0.8;
+}
+
+.add-todo-icon:hover i {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.todo-container {
+    position: absolute;
+    top: 100px;
+    padding: 10px;
+    padding-top: 10%;
+}
+
+.todo input, .todo input:focus {
+    background: transparent;
+    border: none;
+    outline: none;
 }
