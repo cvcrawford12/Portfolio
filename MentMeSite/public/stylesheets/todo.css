@@ -79,8 +79,21 @@ hr {
     padding-top: 10%;
 }
 
-.todo input, .todo input:focus {
+.todo input, .todo input::placeholder {
+    color: #fff;
     background: transparent;
     border: none;
+}
+
+.todo input:focus {
     outline: none;
+}
+
+#add-task:hover, #add-group:hover {
+    cursor: pointer;
+}
+
+.fa-circle {
+    font-size: 1.2em !important;
+    color: rgb(100, 200, 255);
 }
