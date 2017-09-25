@@ -19,8 +19,8 @@ var blogRoutes = require("./routes/blogs"),
 app.use(flash());
 app.use(fileUpload());
 // app config 
-//mongoose.connect("mongodb://localhost/restful_blog_app_V2");
-mongoose.connect("mongodb://crawfo:euroblog@ds119302.mlab.com:19302/euroblog");
+mongoose.connect("mongodb://localhost/restful_blog_app_V2");
+// mongoose.connect("mongodb://crawfo:euroblog@ds119302.mlab.com:19302/euroblog");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
