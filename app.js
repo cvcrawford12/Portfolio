@@ -43,7 +43,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // SANITIZE AND SEED
 app.use(expressSanitizer());
-//seedDB();
+seedDB();
 
 // MIDDLEWARE TO USE CURRENT USER FROM BODY IN ALL ROUTES
 app.use(function(req, res, next) {
