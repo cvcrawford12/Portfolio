@@ -14,8 +14,16 @@
                     </div>
                     <div class="todo-container">
                         <ul class="todo-list">
-                            <li class="todo"><i class="fa fa-circle" aria-hidden="true"></i><input type="text" placeholder="Placeholder"></li>
+                            <li class="todo">
+                                <i class="fa fa-circle edit-trigger" aria-hidden="true" type="button" data-title='Edit Group <button class="close close-popover">&times</button>' data-container="body" data-toggle="popover" data-placement="right">
+                                </i><input type="text" placeholder="Placeholder">
+                            </li>
                         </ul>
+                        <div class="popover-content" style="display: none;">
+                            <div class="edit-template col-xs-6">
+                                <p class="popover-p"><span class='edit-icon'><i class='fa fa-circle' aria-hidden='true'></i></span> General</p><p class="popover-p"><span class='edit-icon'><i class='fa fa-circle' aria-hidden='true'></i></span> General</p><p class="popover-p"><span class='edit-icon'><i class='fa fa-circle' aria-hidden='true'></i></span> General</p><p class="popover-p"><span class='edit-icon'><i class='fa fa-circle' aria-hidden='true'></i> General</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="add-todos-container">
                         <ul class="add-todos-list">
@@ -23,6 +31,30 @@
                             <li id="add-group"><span class="add-todo-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span> Create Task Group</li>
                         </ul>
                     </div>
+                </div>
+                <div class="col-md-6 col-sm-6 todo-detail-container">
+                    <div class="expandable-outer-container">
+                        <div class="expandable-container">
+                            <!--<span class="pull-right">&times</span><span class="pull-right"><i class="fa fa-check" aria-hidden="true"></i></span>-->
+                            <h4 class="task-title inline">Work On Operating system project</h4>
+                            <div class="hidden-content hide">
+                                <label for='details'>Details</label>
+                                <p id="details">This is going to show once I am clicked on!</p>
+                                <label for='notes'>Notes</label>
+                                <p class="notes">Some notes go here</p>
+                                <textarea class="form-control hide-textarea" rows=3></textarea>
+                            </div>
+                        </div>
+                        <div class="expandable-container">
+                            <h3 class="task-title inline">Task 1</h3><span>&times</span><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="expandable-container">
+                            <h3 class="task-title inline">Task 1</h3><span>&times</span><span><i class="fa fa-check" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-3 col-sm-3 motivation-container collapse-container'>
+                    <p>Some motivation</p>
                 </div>
             </div>
         </div>

@@ -83,6 +83,7 @@ hr {
     color: #fff;
     background: transparent;
     border: none;
+    vertical-align: middle;
 }
 
 .todo input:focus {
@@ -94,6 +95,166 @@ hr {
 }
 
 .fa-circle {
-    font-size: 1.2em !important;
+    font-size: 1em !important;
     color: rgb(100, 200, 255);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.edit-template p {
+    margin: 0 auto;
+}
+
+.popover {
+    color: #222;
+    height: auto;
+    min-width: 30%;
+    max-width: 50%;
+}
+
+.close-popover {
+    outline: none;
+    vertical-align: top;
+}
+
+.edit-template {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Todo Detail Styling */
+.todo-detail-container {
+    color: #222;
+    height: 100%;
+    padding: auto;
+}
+
+.expandable-outer-container {
+    position: relative;
+    width: 80%;
+    top: 100px;
+    margin: 0 auto;
+}
+
+.expandable-container{
+    color: #222;
+    width: 33%;
+    height: 100px;
+    margin-bottom: 4%;
+    
+    /* Transitions*/
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  
+}
+
+.open {
+    width: 100%;
+}
+
+.out {
+    width: 0 !important;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.hidden-content {
+    margin-top: 10px;
+    
+     /* Transitions*/
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.hide {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.show {
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+/* Motivational styling */
+.motivation-container {
+    background: #222;
+    height: 100%;
+}
+
+.hide-textarea {
+    width: 0;
+    height: 0;
+    display: none;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.show-textarea {
+    width: 100%;
+    display: block;
+}
+
+/* Color classes for groups*/
+.red {
+    color: #e6194b;
+}
+
+.blue {
+    color: #0082c8;
+}
+
+.green {
+    color: #5fd37a;
+}
+
+.teal {
+    color: #46f0f0;
+}
+
+.navy {
+    color: #000080;
+}
+
+.pink {
+    color: #fabebe;
+}
+
+.orange {
+    color: #f58231;
+}
+
+.purple {
+    color: #911eb4;
+}
+
+.gold {
+    color: #808000;
+}
+
+.yellow {
+    color: #ffe119;
+}
+
+.grey {
+    color: #808080;
+}
+
+.lime {
+    color: #d2f53c;
 }
