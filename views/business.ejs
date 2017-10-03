@@ -1,0 +1,97 @@
+<% include partials/header %>
+
+
+<div class="business-page container">
+    <div class="row">
+        <div class= "col-xs-12 col-md-8 col-centered">
+            <ul>
+                <li class="step">
+                    <div class="thumbnail animated slideInUp">
+                        <div class="row">
+                            <div class="col-xs-10 col-centered">
+                                <div class="caption">
+                                    <hr>
+                                    <h3 align="center"><strong>Let's Talk Business</h3></strong>
+                                    <hr>
+                                    <p class="business-paragraph">
+                                        Here at FastFire we care about making personal relationships with you  
+                                        and catering to your specific needs. Oue goal is customer satisfaction and guaranteeing 
+                                        all parties including you and the product consumers are satisfied.
+                                    </p>
+                                    <dl class="business-paragraph">
+                                        <dt>Want to buy a big order?</dt>
+                                        <dd>No problem, just give us enough time to process your order and we will guarantee your happiness.</dd>
+                                        <dt>Just want a few to test how they sell?</dt>
+                                        <dd>Again not a problem, it is our policy to satisfy your order whatever however large the quantity.</dd>
+                                        <dt>Questions or Concerns?</dt>
+                                        <dd>Send us an email, phone call, or message via facebook and we'll be happy to answer any of your questions with clarity.</dd>
+                                    </dl>
+                                    <div>
+                                        <a id="recruitment" class="btn btn-success btn-mini pull-right">Order Form<span class="glyphicon glyphicon-menu-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="order" class="step">
+                    <div class="thumbnail">
+                        <div class="row">
+                            <div class="col-xs-10 col-centered">
+                                <div class="caption">
+                                    <hr>
+                                    <h3 align="center">
+                                        <strong>FastFire Order Form</strong>
+                                    </h3>
+                                    <hr>
+                                    <p id="paragraph">
+                                        Fill out the order form below with the number of desired packages. 
+                                        Note that the larger the order the lower the cost per package. 
+                                    </p>
+                                    <p id="paragraph">
+                                        Just want one to test how it works? Contact us via email, phone, or facebook and we'll make that happen for you.
+                                    </p>
+                                    <div class="well">
+                                        <form class="form-horizontal" action="/main/contact/order" method="POST">
+                                            <label for="org-name">Organization Name</label>
+                                            <div class="form-group">
+                                                <input id="required" class="form-control" type="text" name="name" placeholder="Your Organization">
+                                            </div>
+                                            <label for="number">Phone Number</label>
+                                            <div class="form-group">
+                                                <input id="number"class="form-control" type="number" name="number" placeholder="(805)-248-1233">
+                                            </div>
+                                            <label for="email">Email</label>
+                                            <div class="form-group">
+                                                <input id="email" class="form-control" type="email" name="email" placeholder="your.organization@gmail.com">
+                                            </div>
+                                            <label for="quantity">Quantity</label>
+                                            <div style="padding-left: 12px" class="form-group">
+                                                <input class="number" style="display: inline-block;" name="quantity" id="quantity" type="number" placeholder="1">
+                                                <span>x $10.00/per package</span>
+                                            </div>
+                                            <label for="cost">Total Cost</label>
+                                            <div id="cost" class="form-group">
+                                                <label for="cost" style="padding-right: 2px;">$</label>
+                                                <input class="number" id="total-cost" type="number" name="total-cost">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary btn-mini">
+                                                    Order
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div>
+                                        <a href="/main" class="btn btn-success pull-right"><span class="glyphicon glyphicon-home"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>
